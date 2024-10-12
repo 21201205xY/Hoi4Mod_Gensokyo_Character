@@ -1,0 +1,17 @@
+scripted_gui = {
+	gsk_decision_scripted_gui = {
+		context_type = decision_category
+		window_name = "gsk_decision_ui_window"
+
+		effects = {
+			gsk_help_button_click = {
+				country_event = gsk_main_event.2
+			}
+		}
+		effects = {
+			gsk_show_mio_button_click = {
+				country_event = gsk_main_event.22
+			}
+		}
+	}
+}

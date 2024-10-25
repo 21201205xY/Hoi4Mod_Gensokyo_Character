@@ -89,7 +89,7 @@ gsk_recruit_character_interaction = {
 		allowed = {
 		}
 		available = {
-			has_tech = antitank2
+			has_tech = artillery3
 		}
 		visible = {
 			has_country_flag = gsk_system_is_enable_flag
@@ -208,7 +208,7 @@ gsk_recruit_character_interaction = {
 		allowed = {
 		}
 		available = {
-			has_tech = improved_heavy_tank_chassis
+			has_tech = advanced_medium_tank_chassis
 		}
 		visible = {
 			has_country_flag = gsk_system_is_enable_flag
@@ -236,8 +236,11 @@ gsk_recruit_character_interaction = {
 		allowed = {
 		}
 		available = {
-			has_tech = nuclear_reactor
-			#has_built = {type = nuclear_reactor value < 3 }
+			has_tech = nuclear_reactors1
+			# has_built = {
+			# 	type = arms_factory
+			# 	value > 1
+			# }
 		}
 		visible = {
 			has_country_flag = gsk_system_is_enable_flag
@@ -529,7 +532,7 @@ gsk_recruit_character_interaction = {
 			has_country_flag = gsk_system_is_enable_flag
 			has_country_flag = kaguya_is_recruit_flag
 			has_dlc = "Arms Against Tyranny"
-			num_of_factories > 200
+			num_of_factories > 300
 		}
 		fire_only_once = no
 		cost = 50
@@ -582,8 +585,8 @@ gsk_recruit_character_interaction = {
 			has_country_flag = kaguya_is_recruit_flag
 			has_dlc = "Arms Against Tyranny"
 			AND = {
-				num_of_factories > 100
-				num_of_factories < 200
+				num_of_factories > 150
+				num_of_factories < 300
 			}
 		}
 		fire_only_once = no
@@ -636,7 +639,7 @@ gsk_recruit_character_interaction = {
 			has_country_flag = gsk_system_is_enable_flag
 			has_country_flag = kaguya_is_recruit_flag
 			has_dlc = "Arms Against Tyranny"
-			num_of_factories < 100
+			num_of_factories < 150
 		}
 		fire_only_once = no
 		cost = 50

@@ -1,6 +1,5 @@
 #采用gsk_hire_event.310格式的事件，均为弃用隐藏事件
 
-
 add_namespace = gsk_hire_event
 country_event = {
 	id = gsk_hire_event.31
@@ -96,7 +95,7 @@ country_event = {
 		add_tech_bonus = {
 			bonus = 0.5
 			uses = 1
-			technology = antitank3
+			technology = sp_artillery2
 		}
 		ai_chance = {
 			base = 0
@@ -298,8 +297,8 @@ country_event = {
 		add_tech_bonus = {
 			bonus = 1
 			uses = 1
-			ahead_reduction = 2
-			technology = super_heavy_tank_chassis
+			ahead_reduction = 6
+			technology = main_battle_tank_chassis
 		}
 		ai_chance = {
 			base = 0

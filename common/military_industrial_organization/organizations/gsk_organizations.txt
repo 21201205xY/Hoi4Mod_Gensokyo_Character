@@ -36,6 +36,9 @@ gsk_kourindou_design_bureau = {
 		mio_cat_eq_all_carrier
 		anti_tank_equipment
 		anti_air_equipment
+		attack_helicopter_equipment
+		light_mechanized_equipment
+		utility_helicopter_equipment
 	}
 	research_categories = {
 		infantry_weapons
@@ -192,6 +195,7 @@ gsk_kourindou_design_bureau = {
 		}
 		limit_to_equipment_type = {
 			mechanized_equipment
+			light_mechanized_equipment
 		}
 		equipment_bonus = {
 			build_cost_ic = -0.25
@@ -241,6 +245,8 @@ gsk_kourindou_design_bureau = {
 		relative_position_id = gsk_kourindou_design_bureau01
 		limit_to_equipment_type = {
 			mio_cat_eq_all_small_plane
+			attack_helicopter_equipment
+			utility_helicopter_equipment
 		}
 		equipment_bonus = {
 			build_cost_ic = -0.25
@@ -1053,14 +1059,18 @@ gsk_kapa_design_bureau = {
 		armor
 		mechanized_equipment
 		motorized_equipment
-		armored_car_equipment
+		# armored_car_equipment
 		train_equipment
+		utility_helicopter_equipment
+		light_mechanized_equipment
 	}
 	research_categories = {
 		armor
 		mio_cat_tech_all_motorized_mechanized
 		armored_car_at_equipment
 		train_tech
+		utility_helicopter_equipment
+		light_mechanized_equipment
 	}
 	tree_header_text = {
 		text = gsk_mio_header_armor_department
@@ -1309,17 +1319,17 @@ gsk_kapa_design_bureau = {
 	trait = {
 		token = gsk_kapa_design_bureau11
 		name = gsk_kapa_design_bureau11
-		icon = GFX_generic_mio_department_icon_tank_heavy_tank_armor
+		icon = GFX_generic_mio_department_icon_plane_light_production
 		position = {
 			x = 6
 			y = 0
 		}
 		limit_to_equipment_type = {
-			mio_cat_eq_all_heavy_tank
+			utility_helicopter_equipment
 		}
 		equipment_bonus = {
-			reliability = 0.05
-			defense = 0.05
+			reliability = 0.3
+			defense = 0.3
 		}
 		organization_modifier = {
 			military_industrial_organization_funds_gain = 0.05
@@ -1368,7 +1378,7 @@ gsk_kapa_design_bureau = {
 	trait = {
 		token = gsk_kapa_design_bureau14
 		name = gsk_kapa_design_bureau14
-		icon = GFX_generic_mio_department_icon_tank_heavy_tank_at
+		icon = GFX_generic_mio_department_icon_plane_general_production
 		position = {
 			x = 0
 			y = 1
@@ -1378,11 +1388,11 @@ gsk_kapa_design_bureau = {
 			gsk_kapa_design_bureau11
 		}
 		limit_to_equipment_type = {
-			mio_cat_eq_all_heavy_tank
+			utility_helicopter_equipment
 		}
 		equipment_bonus = {
-			hard_attack = 0.05
-			ap_attack = 0.1
+			hard_attack = 0.3
+			# ap_attack = 0.1
 		}
 		organization_modifier = {
 		}
@@ -1438,7 +1448,7 @@ gsk_kapa_design_bureau = {
 	trait = {
 		token = gsk_kapa_design_bureau17
 		name = gsk_kapa_design_bureau17
-		icon = GFX_generic_mio_department_icon_tank_heavy_tank_engine
+		icon = GFX_generic_mio_department_icon_plane_fighter_conversion
 		position = {
 			x = 0
 			y = 1
@@ -1452,12 +1462,11 @@ gsk_kapa_design_bureau = {
 			gsk_kapa_design_bureau16
 		}
 		limit_to_equipment_type = {
-			mio_cat_eq_all_heavy_tank
+			utility_helicopter_equipment
 		}
 		equipment_bonus = {
-			breakthrough = 0.05
-			maximum_speed = 0.05
-			soft_attack = 0.05
+			# maximum_speed = 0.05
+			soft_attack = 0.3
 		}
 	}
 	trait = {
@@ -1479,25 +1488,25 @@ gsk_kapa_design_bureau = {
 		    production_capacity_factor = 0.3
 		}
 	}
-	trait = {
-		token = gsk_kapa_design_bureau19
-		name = gsk_kapa_design_bureau19
-		icon = GFX_generic_mio_department_icon_armored_car_engine
-		position = {
-			x = 6
-			y = 4
-		}
-		limit_to_equipment_type = {
-			armored_car_equipment
-		}
-		equipment_bonus = {
-		    build_cost_ic = -0.5
-			reliability = 0.1
-		    soft_attack = 0.5
-		}
-		production_bonus = {
-		}
-	}
+	# trait = {
+	# 	token = gsk_kapa_design_bureau19
+	# 	name = gsk_kapa_design_bureau19
+	# 	icon = GFX_generic_mio_department_icon_armored_car_engine
+	# 	position = {
+	# 		x = 6
+	# 		y = 4
+	# 	}
+	# 	limit_to_equipment_type = {
+	# 		armored_car_equipment
+	# 	}
+	# 	equipment_bonus = {
+	# 	    build_cost_ic = -0.5
+	# 		reliability = 0.1
+	# 	    soft_attack = 0.5
+	# 	}
+	# 	production_bonus = {
+	# 	}
+	# }
 	trait = {
 		token = gsk_kapa_design_bureau20
 		name = gsk_kapa_design_bureau20
@@ -1526,6 +1535,7 @@ gsk_kapa_design_bureau = {
             mechanized_equipment
 			motorized_equipment
 			amphibious_mechanized_equipment
+			light_mechanized_equipment
 		}
 		equipment_bonus = {
 			reliability = 0.1
@@ -1549,6 +1559,7 @@ gsk_kapa_design_bureau = {
 		limit_to_equipment_type = {
             mechanized_equipment
 			amphibious_mechanized_equipment
+			light_mechanized_equipment
 		}
 		equipment_bonus = {
             breakthrough = 0.06
@@ -1572,6 +1583,7 @@ gsk_kapa_design_bureau = {
 		limit_to_equipment_type = {
             mechanized_equipment
 			amphibious_mechanized_equipment
+			light_mechanized_equipment
 		}
 		equipment_bonus = {
 			maximum_speed = 0.1
@@ -1596,6 +1608,7 @@ gsk_kapa_design_bureau = {
 		limit_to_equipment_type = {
             mechanized_equipment
 			amphibious_mechanized_equipment
+			light_mechanized_equipment
 		}
 		equipment_bonus = {
 			fuel_consumption = -0.1
@@ -1617,6 +1630,7 @@ gsk_kapa_design_bureau = {
 		limit_to_equipment_type = {
             mechanized_equipment
 			amphibious_mechanized_equipment
+			light_mechanized_equipment
 		}
 		equipment_bonus = {
 			build_cost_ic = -0.1
@@ -1640,6 +1654,7 @@ gsk_kapa_design_bureau = {
 		limit_to_equipment_type = {
             mechanized_equipment
 			amphibious_mechanized_equipment
+			light_mechanized_equipment
 		}
 		equipment_bonus = {
 			build_cost_ic = 0.1
@@ -1664,6 +1679,7 @@ gsk_kapa_design_bureau = {
 		limit_to_equipment_type = {
             mechanized_equipment
 			amphibious_mechanized_equipment
+			light_mechanized_equipment
 		}
 		equipment_bonus = {
 			hardness = 0.03
@@ -1687,6 +1703,7 @@ gsk_kapa_design_bureau = {
 		limit_to_equipment_type = {
             mechanized_equipment
 			amphibious_mechanized_equipment
+			light_mechanized_equipment
 		}
 		equipment_bonus = {
 			hard_attack = 0.15
@@ -1754,11 +1771,13 @@ gsk_hakurei_design_bureau = {
 		mio_cat_eq_all_small_plane 
 		mio_cat_eq_all_medium_plane
 		mio_cat_eq_all_large_plane
+		attack_helicopter_equipment
 	}
 	research_categories = {
 		mio_cat_all_light_aircraft_and_modules
 		mio_cat_all_medium_aircraft_and_modules
 		mio_cat_all_heavy_aircraft_and_modules
+		attack_helicopter_equipment
 	}
 	tree_header_text = {
 		text = gsk_mio_header_light_aircraft_department
@@ -1795,6 +1814,7 @@ gsk_hakurei_design_bureau = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_all_small_plane
+			attack_helicopter_equipment
 		}
 		equipment_bonus = {
 			reliability = 0.1
@@ -1817,6 +1837,7 @@ gsk_hakurei_design_bureau = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_all_small_plane
+			attack_helicopter_equipment
 		}
 		equipment_bonus = {
 			maximum_speed = 0.3
@@ -1836,6 +1857,7 @@ gsk_hakurei_design_bureau = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_all_small_plane
+			attack_helicopter_equipment
 		}
 		equipment_bonus = {
 			fuel_consumption = -0.1
@@ -1855,6 +1877,7 @@ gsk_hakurei_design_bureau = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_all_small_plane
+			attack_helicopter_equipment
 		}
 		equipment_bonus = {
 			air_range = 0.3
@@ -1876,6 +1899,7 @@ gsk_hakurei_design_bureau = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_all_small_plane
+			attack_helicopter_equipment
 		}
 		equipment_bonus = {
 			air_attack = 0.15
@@ -1898,6 +1922,7 @@ gsk_hakurei_design_bureau = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_all_small_plane
+			attack_helicopter_equipment
 		}
 		equipment_bonus = {
 			air_ground_attack = 0.15
@@ -1920,6 +1945,7 @@ gsk_hakurei_design_bureau = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_all_small_plane
+			attack_helicopter_equipment
 		}
 		equipment_bonus = {
 			naval_strike_attack = 0.15
@@ -1940,6 +1966,7 @@ gsk_hakurei_design_bureau = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_all_small_plane
+			attack_helicopter_equipment
 		}
 		equipment_bonus = {
 			air_attack = 0.15
@@ -1960,6 +1987,7 @@ gsk_hakurei_design_bureau = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_all_small_plane
+			attack_helicopter_equipment
 		}
 		equipment_bonus = {
 			air_ground_attack = 0.15
@@ -1980,6 +2008,7 @@ gsk_hakurei_design_bureau = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_all_small_plane
+			attack_helicopter_equipment
 		}
 		equipment_bonus = {
 			naval_strike_attack = 0.15
@@ -2004,6 +2033,7 @@ gsk_hakurei_design_bureau = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_all_small_plane
+			attack_helicopter_equipment
 		}
 		equipment_bonus = {
 			air_range = 0.1
@@ -2029,6 +2059,7 @@ gsk_hakurei_design_bureau = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_all_small_plane
+			attack_helicopter_equipment
 		}
 		equipment_bonus = {
 			air_ground_attack = 0.2
@@ -2054,6 +2085,7 @@ gsk_hakurei_design_bureau = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_all_small_plane
+			attack_helicopter_equipment
 		}
 		equipment_bonus = {
 			naval_strike_attack = 0.2
@@ -2987,6 +3019,9 @@ gsk_kaguya_design_bureau = {
 		screen_ship
 		mio_cat_eq_all_carrier
 		submarine
+		attack_helicopter_equipment
+		utility_helicopter_equipment
+		light_mechanized_equipment
 	}
 	research_categories = {
 		infantry_weapons
@@ -3001,6 +3036,9 @@ gsk_kaguya_design_bureau = {
 		mio_cat_tech_all_screen_ship_and_modules
 		mio_cat_tech_all_carrier_and_modules
 		mio_cat_tech_all_submarine_and_modules
+		attack_helicopter_equipment
+		utility_helicopter_equipment
+		light_mechanized_equipment
 	}
 	on_tech_research_cancelled = {
 		owner = {
@@ -3157,6 +3195,7 @@ gsk_kaguya_design_bureau = {
 		}
 		limit_to_equipment_type = {
 			armor
+			utility_helicopter_equipment
 		}
 		equipment_bonus = {
 			soft_attack = 1
@@ -3225,6 +3264,7 @@ gsk_kaguya_design_bureau = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_all_small_plane
+			attack_helicopter_equipment
 		}
 		equipment_bonus = {
 			air_attack = 1

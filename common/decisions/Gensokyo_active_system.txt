@@ -48,6 +48,7 @@ gsk_active_system = {
 			base = 0
 		}
 		complete_effect = {
+			set_global_flag = find_gsk
 			set_country_flag = remilia_is_recruit_flag
 			set_country_flag = sakuya_is_recruit_flag
 			set_country_flag = keine_is_recruit_flag
@@ -541,7 +542,7 @@ gsk_active_system = {
 		visible = {
 			has_country_flag = gsk_system_is_enable_flag
 			not = { has_country_flag = show_other_role_recruitment_flag }
-			AND = {
+			OR = {
 				not = { has_country_flag = tenshi_is_recruit_flag }
 				not = { has_country_flag = yukari_is_recruit_flag }
 				not = { has_country_flag = kokoro_is_recruit_flag }
@@ -569,13 +570,15 @@ gsk_active_system = {
 		visible = {
 			has_country_flag = gsk_system_is_enable_flag
 			has_country_flag = show_other_role_recruitment_flag
-			AND = {
-				not = { has_country_flag = tenshi_is_recruit_flag }
-				not = { has_country_flag = yukari_is_recruit_flag }
-				not = { has_country_flag = kokoro_is_recruit_flag }
-				not = { has_country_flag = kogasa_is_recruit_flag }
-				not = { has_country_flag = yuka_is_recruit_flag }
-				not = { has_country_flag = shikieiki_is_recruit_flag }
+			NOT = {
+				AND = {
+					has_country_flag = tenshi_is_recruit_flag
+					has_country_flag = yukari_is_recruit_flag
+					has_country_flag = kokoro_is_recruit_flag
+					has_country_flag = kogasa_is_recruit_flag
+					has_country_flag = yuka_is_recruit_flag
+					has_country_flag = shikieiki_is_recruit_flag
+				}
 			}
 		}
 		fire_only_once = no

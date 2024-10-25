@@ -3,9 +3,9 @@ tags={
 	"Gameplay"
 	"Events"
 }
-
 dependencies={
-	
+	"The Fire Rises"
+	"3350890356"
 }
 name="TouHou Mod:Gensokyo Character"
 supported_version="1.14.*"

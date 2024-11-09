@@ -360,8 +360,7 @@ country_event = {
 		}
 	}
 }
-#地灵殿Chireiden
-country_event = {
+country_event = { #地灵殿Chireiden
 	id = gsk_main_event.80
 	title = gsk_main_event.80.t
 	desc = gsk_main_event.80.d
@@ -376,6 +375,8 @@ country_event = {
 		custom_effect_tooltip = gsk_main_event.80.a.tt
 		set_country_flag = satori_is_recruit_flag
 		set_country_flag = koishi_is_recruit_flag
+		gsk_create_satori_operative = yes
+		gsk_create_koishi_operative = yes
 		create_intelligence_agency = {
 			name = "地灵殿"
 			icon = GFX_intelligence_agency_logo_generic_2
@@ -388,6 +389,8 @@ country_event = {
 		name = gsk_main_event.80.b
 		custom_effect_tooltip = gsk_main_event.recruit.tt
 		set_country_flag = already_exploring_chireiden_flag
+		gsk_create_satori_operative = yes
+		gsk_create_koishi_operative = yes
 		create_intelligence_agency = {
 			name = "地灵殿"
 			icon = GFX_intelligence_agency_logo_generic_2
@@ -465,6 +468,11 @@ country_event = {
 	trigger = {
 		has_global_flag = ofn_cps_embargo
 		is_ai = no
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = sanae_is_recruit_flag
+		}
 	}
 	option = {
 		name = gsk_main_event.1000.a

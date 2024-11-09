@@ -22,15 +22,6 @@ guiTypes = {
 			text = gsk_decision_description_t
 			maxWidth = 460
 		}
-		#checkboxType = {
-		#	name = "gsk_decision_checkbox"
-		#	position = {
-		#		x = 20
-		#		y = 10
-		#	}
-		#	buttonFont = "hoi_18mbs" 
-		#	buttonText = "隐藏任务完成提示事件"
-		#}
 		buttonType = {
 			name ="gsk_help_button"
 			position = { x= 15	y= 200 }
@@ -46,6 +37,7 @@ guiTypes = {
 			text = gsk_show_mio_button.tt
 			spriteType = "GFX_btn_blue"
 			clicksound = click_default
-		}	
+		}
+		
 	}
 }

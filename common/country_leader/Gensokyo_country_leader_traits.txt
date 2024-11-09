@@ -147,7 +147,7 @@ leader_traits = {
 		random = no
 		
 		enemy_operative_detection_chance = 20
-		operative_slot = 1
+		operative_slot = 2
 		decryption_power_factor = 0.3
 		intel_network_gain_factor = 0.3
 		
@@ -161,7 +161,7 @@ leader_traits = {
 		own_operative_detection_chance_factor = -0.25
 		own_operative_intel_extraction_rate = -0.25
 		foreign_subversive_activites = -0.3
-		new_operative_slot_bonus = 1
+		new_operative_slot_bonus = 2
 		
 		ai_will_do = {
 			factor = 1

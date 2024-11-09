@@ -1,0 +1,10 @@
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_portrait_satori_intel"
+		texturefile = "gfx/leaders/gsk_leader_satori.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_koishi_intel"
+		texturefile = "gfx/leaders/gsk_leader_koishi.dds"
+	}
+}

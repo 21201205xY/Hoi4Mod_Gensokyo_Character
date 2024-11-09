@@ -80,9 +80,21 @@ gsk_active_system = {
 			set_country_flag = shikieiki_is_recruit_flag
 			set_country_flag = kosuzu_is_recruit_flag
 			set_country_flag = gsk_system_is_enable_flag
-			set_technology = { shikieiki_attack = 1 popup = no }
-			set_technology = { shikieiki_defend = 1 popup = no }
-			set_technology = { masterful_blitz = 1 popup = no }
+			set_technology = {
+				shikieiki_attack = 1
+				popup = no
+			}
+			set_technology = {
+				shikieiki_defend = 1
+				popup = no
+			}
+			# set_technology = { masterful_blitz = 1 popup = no }
+			create_intelligence_agency = {
+				name = "地灵殿"
+				icon = GFX_intelligence_agency_logo_generic_2
+			}
+			gsk_create_satori_operative = yes
+			gsk_create_koishi_operative = yes
 			set_technology = {
 				gsk_equipment_houraisan_med_tech = 1
 			}
@@ -114,9 +126,7 @@ gsk_active_system = {
 		}
 		fire_only_once = yes
 		cost = 30
-		#cost = 0
 		days_remove = 50
-		#days_remove = 1
 		modifier = {
 			consumer_goods_factor = 0.05
 		}
@@ -176,9 +186,7 @@ gsk_active_system = {
 		}
 		fire_only_once = yes
 		cost = 60
-		#cost = 0
 		days_remove = 30
-		#days_remove = 1
 		modifier = {
 			consumer_goods_factor = 0.05
 		}
@@ -238,9 +246,7 @@ gsk_active_system = {
 		}
 		fire_only_once = yes
 		cost = 60
-		#cost = 0
 		days_remove = 30
-		#days_remove = 1
 		modifier = {
 			consumer_goods_factor = 0.05
 		}
@@ -275,7 +281,7 @@ gsk_active_system = {
 		ai_will_do = {
 			factor = 0
 		}
-		complete_effect = {			
+		complete_effect = {
 			custom_effect_tooltip = gsk_main_event.51.a.tt
 			set_country_flag = reimu_is_recruit_flag
 			set_country_flag = marisa_is_recruit_flag
@@ -301,9 +307,7 @@ gsk_active_system = {
 		}
 		fire_only_once = yes
 		cost = 60
-		#cost = 0
 		days_remove = 30
-		#days_remove = 1
 		modifier = {
 			consumer_goods_factor = 0.05
 		}
@@ -339,7 +343,7 @@ gsk_active_system = {
 		ai_will_do = {
 			factor = 0
 		}
-		complete_effect = {	
+		complete_effect = {
 			custom_effect_tooltip = gsk_main_event.70.a.tt
 			set_country_flag = sanae_is_recruit_flag
 			set_country_flag = suwako_is_recruit_flag
@@ -353,7 +357,7 @@ gsk_active_system = {
 		}
 		available = {
 			not = {
-				has_country_flag = already_exploring_flag  
+				has_country_flag = already_exploring_flag
 			}
 		}
 		visible = {
@@ -365,9 +369,7 @@ gsk_active_system = {
 		}
 		fire_only_once = yes
 		cost = 30
-		#cost = 0
 		days_remove = 50
-		#days_remove = 1
 		modifier = {
 			consumer_goods_factor = 0.05
 		}
@@ -402,7 +404,7 @@ gsk_active_system = {
 		ai_will_do = {
 			factor = 0
 		}
-		complete_effect = {	
+		complete_effect = {
 			custom_effect_tooltip = gsk_main_event.80.a.tt
 			set_country_flag = satori_is_recruit_flag
 			set_country_flag = koishi_is_recruit_flag
@@ -427,9 +429,7 @@ gsk_active_system = {
 		}
 		fire_only_once = yes
 		cost = 30
-		#cost = 0
 		days_remove = 50
-		#days_remove = 1
 		modifier = {
 			consumer_goods_factor = 0.05
 		}
@@ -464,7 +464,7 @@ gsk_active_system = {
 		ai_will_do = {
 			factor = 0
 		}
-		complete_effect = {	
+		complete_effect = {
 			custom_effect_tooltip = gsk_main_event.90.a.tt
 			set_country_flag = yuyuko_is_recruit_flag
 			set_country_flag = youmu_is_recruit_flag
@@ -489,9 +489,7 @@ gsk_active_system = {
 		}
 		fire_only_once = yes
 		cost = 30
-		#cost = 0
 		days_remove = 50
-		#days_remove = 1
 		modifier = {
 			consumer_goods_factor = 0.05
 		}
@@ -526,7 +524,7 @@ gsk_active_system = {
 		ai_will_do = {
 			factor = 0
 		}
-		complete_effect = {	
+		complete_effect = {
 			custom_effect_tooltip = gsk_main_event.100.a.tt
 			set_country_flag = tewi_is_recruit_flag
 			set_country_flag = reisen_is_recruit_flag
@@ -540,14 +538,28 @@ gsk_active_system = {
 		}
 		visible = {
 			has_country_flag = gsk_system_is_enable_flag
-			not = { has_country_flag = show_other_role_recruitment_flag }
+			not = {
+				has_country_flag = show_other_role_recruitment_flag
+			}
 			OR = {
-				not = { has_country_flag = tenshi_is_recruit_flag }
-				not = { has_country_flag = yukari_is_recruit_flag }
-				not = { has_country_flag = kokoro_is_recruit_flag }
-				not = { has_country_flag = kogasa_is_recruit_flag }
-				not = { has_country_flag = yuka_is_recruit_flag }
-				not = { has_country_flag = shikieiki_is_recruit_flag }
+				not = {
+					has_country_flag = tenshi_is_recruit_flag
+				}
+				not = {
+					has_country_flag = yukari_is_recruit_flag
+				}
+				not = {
+					has_country_flag = kokoro_is_recruit_flag
+				}
+				not = {
+					has_country_flag = kogasa_is_recruit_flag
+				}
+				not = {
+					has_country_flag = yuka_is_recruit_flag
+				}
+				not = {
+					has_country_flag = shikieiki_is_recruit_flag
+				}
 			}
 		}
 		fire_only_once = no
@@ -586,7 +598,7 @@ gsk_active_system = {
 		ai_will_do = {
 			factor = 0
 		}
-		complete_effect = {	
+		complete_effect = {
 			clr_country_flag = show_other_role_recruitment_flag
 		}
 	}

@@ -240,7 +240,15 @@ spriteTypes = {
 		texturefile = "gfx/traits/satori_commander_peculiarity_traits.png"
 	}
 	spriteType = {
+		name = "GFX_trait_satori_spy_peculiarity"
+		texturefile = "gfx/traits/satori_commander_peculiarity_traits.png"
+	}
+	spriteType = {
 		name = "GFX_trait_koishi_commander_peculiarity"
+		texturefile = "gfx/traits/koishi_commander_peculiarity_traits.png"
+	}
+	spriteType = {
+		name = "GFX_trait_koishi_spy_peculiarity"
 		texturefile = "gfx/traits/koishi_commander_peculiarity_traits.png"
 	}
 	spriteType = {

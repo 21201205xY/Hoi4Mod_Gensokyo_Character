@@ -3,9 +3,7 @@ tags={
 	"Gameplay"
 	"Events"
 }
-
-dependencies={
-	
+"dependencies"={
 }
 name="TouHou Mod:Gensokyo Character"
 supported_version="1.14.*"

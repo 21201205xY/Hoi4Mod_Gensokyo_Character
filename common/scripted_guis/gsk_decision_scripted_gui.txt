@@ -2,6 +2,7 @@ scripted_gui = {
 	gsk_decision_scripted_gui = {
 		context_type = decision_category
 		window_name = "gsk_decision_ui_window"
+		parent_window_token = decision_tab
 
 		effects = {
 			gsk_help_button_click = {

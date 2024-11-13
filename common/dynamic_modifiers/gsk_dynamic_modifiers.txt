@@ -1,0 +1,4 @@
+gsk_dym_add_contact = {
+	civilian_factory_use = 3
+	political_power_gain = -1
+}

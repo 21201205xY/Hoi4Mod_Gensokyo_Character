@@ -5,6 +5,7 @@ gsk_active_system = {
 		is_ai = no
 	}
 	icon = gsk_decision_icon
+	
 	priority = 298
 }
 

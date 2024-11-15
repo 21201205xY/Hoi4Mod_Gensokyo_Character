@@ -6,5 +6,5 @@ tags={
 "dependencies"={
 }
 name="TouHou Mod:Gensokyo Character"
-supported_version="1.14.*"
+supported_version="1.15.*"
 remote_file_id="3262070627"

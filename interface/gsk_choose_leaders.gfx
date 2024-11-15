@@ -1,0 +1,14 @@
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_gsk_leaders_pre_button"
+		texturefile = "gfx/gui/gsk_choose_leaders/pre_button.dds"
+	}
+	SpriteType = {
+		name = "GFX_gsk_leaders_next_button"
+		texturefile = "gfx/gui/gsk_choose_leaders/next_button.dds"
+	}
+	SpriteType = {
+		name = "GFX_gsk_leaders_choose_moriya"
+		texturefile = "gfx/gui/gsk_choose_leaders/choose_moriya.dds"
+	}
+}

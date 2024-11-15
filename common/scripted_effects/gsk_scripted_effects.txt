@@ -515,3 +515,24 @@ gsk_create_koishi_operative = {
 		GFX = GFX_portrait_koishi_intel
 	}
 }
+
+gsk_check_alice_canbe_recruit = {
+	if = {
+		limit = {
+			is_ai = no
+			has_country_flag = gsk_system_is_enable_flag
+			has_country_flag = marisa_is_recruit_flag
+			has_country_flag = patchouli_is_recruit_flag
+			not = {
+				OR = {
+					has_country_flag = gsk_alice_is_recruit_flag
+					has_country_flag = gsk_alice_is_recruit_flag1
+				}
+			}
+		}
+		country_event = {
+			days = 20
+			id = gsk_main_event.60
+		}
+	}
+}

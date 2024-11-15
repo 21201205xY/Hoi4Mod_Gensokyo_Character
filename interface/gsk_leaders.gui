@@ -1,0 +1,63 @@
+# guiTypes = {
+
+# 	containerWindowType = {
+# 		name = "gsk_leaders_ui"
+# 		position = { x = 0 y = 0 }
+# 		size = { width = 200 height= 300 }
+# 		orientation = upper_left
+# 		clipping = yes
+
+# 		iconType = {
+# 			name ="GREY_leader_portrait"
+# 			spriteType = "GFX_leader_unknown"
+# 			position = { x= 18 y= 58 }
+# 			scale = 0.99
+# 		}
+		
+# 		iconType = {
+# 			name ="GREY_leader_frame"
+# 			spriteType = "GFX_leader_unknown"
+# 			position = { x= 10 y= 44 }
+# 			pdx_tooltip = "GREY_leader_fakename"		
+# 		}
+		
+# 		iconType = {
+# 			name ="GREY_leader_frame_research"
+# 			spriteType = "GFX_leader_unknown"
+# 			position = { x= 10 y= 44 }
+# 			pdx_tooltip = "GREY_leader_fakename_research"
+# 		}	
+
+# 		iconType = {
+# 			name ="GREY_leader_frame_diplomacy"
+# 			spriteType = "GFX_leader_unknown"
+# 			position = { x= 10 y= 44 }
+# 			pdx_tooltip = "GREY_leader_fakename_diplomacy"		
+# 		}
+
+# 		iconType = {
+# 			name ="GREY_leader_frame_construction"
+# 			spriteType = "GFX_leader_unknown"
+# 			position = { x= 10 y= 44 }
+# 			pdx_tooltip = "GREY_leader_fakename_construction"		
+# 		}		
+		
+# 		instantTextBoxType = {
+# 			name ="grey_leader_name_text"
+# 			position = { x = 23 y = 272 }
+# 			font = "hoi_18mbs"
+# 			text = "[ROOT.GetGreyLeaderName]"
+# 			format = center
+# 			maxWidth = 150
+# 		}		
+		
+# 		buttonType = {
+# 			name ="change_leader"
+# 			position = { x= 16	y= 54 }
+# 			spriteType = "GFX_change_leader_use_button"
+# 			orientation = upper_left
+# 			clicksound = click_default
+# 			scale = 0.6
+# 		}
+# 	}
+# }

@@ -55,9 +55,8 @@ gsk_recruit_character_interaction = {
 	# 	remove_effect = {
 	# 	}
 	# }
-	embodiment_of_Scarlet_Devil_quest1 = {
+	embodiment_of_Scarlet_Devil_quest1 = { #红魔馆任务:芙兰想要玩耍！
 		priority = 300
-		#红魔馆任务:芙兰想要玩耍！
 		allowed = {
 		}
 		available = {
@@ -83,8 +82,7 @@ gsk_recruit_character_interaction = {
 		remove_effect = {
 		}
 	}
-	embodiment_of_Scarlet_Devil_quest2 = {
-		#红魔馆任务:冈格尼尔之枪的对手！
+	embodiment_of_Scarlet_Devil_quest2 = { #红魔馆任务:冈格尼尔之枪的对手！
 		priority = 299
 		allowed = {
 		}
@@ -112,8 +110,7 @@ gsk_recruit_character_interaction = {
 		remove_effect = {
 		}
 	}
-	embodiment_of_Scarlet_Devil_quest3 = {
-		#红魔馆任务:成为世界之主的第一步！
+	embodiment_of_Scarlet_Devil_quest3 = { #红魔馆任务:成为世界之主的第一步！
 		priority = 298
 		allowed = {
 		}
@@ -141,8 +138,7 @@ gsk_recruit_character_interaction = {
 		remove_effect = {
 		}
 	}
-	human_village_quest0 = {
-		#人间之里任务:我们将书写历史！
+	human_village_quest0 = { #人间之里任务:我们将书写历史！
 		priority = 297
 		allowed = {
 		}
@@ -171,8 +167,7 @@ gsk_recruit_character_interaction = {
 		remove_effect = {
 		}
 	}
-	human_village_quest1 = {
-		#人间之里任务:本居小铃的拯救阿求作战！
+	human_village_quest1 = { #人间之里任务:本居小铃的拯救阿求作战！
 		priority = 297
 		allowed = {
 		}

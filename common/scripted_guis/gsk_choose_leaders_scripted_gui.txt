@@ -1,0 +1,102 @@
+scripted_gui = {
+
+	gsk_choose_leaders_scripted_gui = {
+		context_type = player_context
+		window_name = "gsk_choose_leaders_box"
+		visible = {
+			has_country_flag = gsk_choose_leaders_scripted_gui_show_flag
+		}
+		triggers = {
+			choose_scarlet_devil_visible = { check_variable = { gsk_var_leaders_gui_per_page = 0 } }
+			choose_human_village_visible = { check_variable = { gsk_var_leaders_gui_per_page = 0 } }
+			choose_hakurei_shrine_visible = { check_variable = { gsk_var_leaders_gui_per_page = 0 } }
+			choose_moriya_visible = { check_variable = { gsk_var_leaders_gui_per_page = 0 } }
+			choose_chireiden_visible = { check_variable = { gsk_var_leaders_gui_per_page = 0 } }
+			choose_hakugyokurou_visible = { check_variable = { gsk_var_leaders_gui_per_page = 0 } }
+			choose_eientei_visible = { check_variable = { gsk_var_leaders_gui_per_page = 0 } }
+			choose_other_visible = { check_variable = { gsk_var_leaders_gui_per_page = 0 } }
+			#choose_lunar_capital_click = { check_variable = { gsk_var_leaders_gui_per_page = 1 } }
+
+			choose_remilia_visible = { check_variable = { gsk_var_leaders_gui_page = 0 } }
+			choose_flandre_visible = { check_variable = { gsk_var_leaders_gui_page = 0 } }
+			choose_sakuya_visible = { check_variable = { gsk_var_leaders_gui_page = 0 } }
+			choose_patchouli_visible = { check_variable = { gsk_var_leaders_gui_page = 0 } }
+			choose_cirno_visible = { check_variable = { gsk_var_leaders_gui_page = 0 } }
+
+			choose_keine_visible = { check_variable = { gsk_var_leaders_gui_page = 1 } }
+			choose_akyuu_visible = { check_variable = { gsk_var_leaders_gui_page = 1 } }
+			choose_kosuzu_visible = { check_variable = { gsk_var_leaders_gui_page = 1 } }
+
+			choose_reimu_visible = { check_variable = { gsk_var_leaders_gui_page = 2 } }
+			choose_marisa_visible = { check_variable = { gsk_var_leaders_gui_page = 2 } }
+
+			choose_sanae_visible = { check_variable = { gsk_var_leaders_gui_page = 3 } }
+			choose_kanako_visible = { check_variable = { gsk_var_leaders_gui_page = 3 } }
+			choose_suwako_visible = { check_variable = { gsk_var_leaders_gui_page = 3 } }
+			choose_aya_visible = { check_variable = { gsk_var_leaders_gui_page = 3 } }
+
+			choose_satori_visible = { check_variable = { gsk_var_leaders_gui_page = 4 } }
+			choose_koishi_visible = { check_variable = { gsk_var_leaders_gui_page = 4 } }
+			choose_kokoro_visible = { check_variable = { gsk_var_leaders_gui_page = 4 } }
+
+			choose_youmu_visible = { check_variable = { gsk_var_leaders_gui_page = 5 } }
+			choose_yuyuko_visible = { check_variable = { gsk_var_leaders_gui_page = 5 } }
+			choose_yukari_visible = { check_variable = { gsk_var_leaders_gui_page = 5 } }
+			
+			choose_tewi_visible = { check_variable = { gsk_var_leaders_gui_page = 6 } }
+			choose_reisen_visible = { check_variable = { gsk_var_leaders_gui_page = 6 } }
+			choose_kaguya_visible = { check_variable = { gsk_var_leaders_gui_page = 6 } }
+			choose_mokou_visible = { check_variable = { gsk_var_leaders_gui_page = 6 } }
+			choose_yagokoro_visible = { check_variable = { gsk_var_leaders_gui_page = 6 } }
+
+			choose_yuka_visible = { check_variable = { gsk_var_leaders_gui_page = 7 } }
+			choose_tenshi_visible = { check_variable = { gsk_var_leaders_gui_page = 7 } }
+			choose_kogasa_visible = { check_variable = { gsk_var_leaders_gui_page = 7 } }
+			choose_shikieiki_visible = { check_variable = { gsk_var_leaders_gui_page = 7 } }
+		}
+		effects = {
+			pre_button_click = {
+				if = {
+					limit = {
+						check_variable = {
+							compare = greater_than
+							value = 0
+							var = gsk_var_leaders_gui_per_page
+						}
+					}
+					add_to_variable = {
+						value = -1
+						var = gsk_var_leaders_gui_per_page
+					}
+				}
+			}
+			next_button_click = {
+				if = {
+					limit = {
+						check_variable = {
+							compare = less_than
+							value = 1
+							var = gsk_var_leaders_gui_per_page
+						}
+					}
+					add_to_variable = {
+						value = 1
+						var = gsk_var_leaders_gui_per_page
+					}
+				}
+			}
+			close_button_click = {
+				clr_country_flag = gsk_choose_leaders_scripted_gui_show_flag
+			}
+			choose_scarlet_devil_click = { set_variable = { gsk_var_leaders_gui_page = 0 } }
+			choose_human_village_click = { set_variable = { gsk_var_leaders_gui_page = 1 } }
+			choose_hakurei_shrine_click = { set_variable = { gsk_var_leaders_gui_page = 2 } }
+			choose_moriya_click = { set_variable = { gsk_var_leaders_gui_page = 3 } }
+			choose_chireiden_click = { set_variable = { gsk_var_leaders_gui_page = 4 } }
+			choose_hakugyokurou_click = { set_variable = { gsk_var_leaders_gui_page = 5 } }
+			choose_eientei_click = { set_variable = { gsk_var_leaders_gui_page = 6 } }
+			choose_other_click = { set_variable = { gsk_var_leaders_gui_page = 7 } }
+			#choose_hakugyokurou = { set_variable = { gsk_var_leaders_gui_page = 0 } }
+		}
+	}
+}

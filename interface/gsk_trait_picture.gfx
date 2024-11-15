@@ -172,6 +172,10 @@ spriteTypes = {
 		texturefile = "gfx/traits/patchouli_commander_peculiarity_traits.png"
 	}
 	spriteType = {
+		name = "GFX_scientist_trait_patchouli"
+		texturefile = "gfx/traits/patchouli_commander_peculiarity_traits.png"
+	}
+	spriteType = {
 		name = "GFX_trait_cirno_commander_peculiarity"
 		texturefile = "gfx/traits/cirno_commander_peculiarity_traits.png"
 	}
@@ -188,7 +192,15 @@ spriteTypes = {
 		texturefile = "gfx/traits/akyuu_commander_peculiarity_traits.png"
 	}
 	spriteType = {
+		name = "GFX_scientist_trait_akyuu"
+		texturefile = "gfx/traits/akyuu_commander_peculiarity_traits.png"
+	}
+	spriteType = {
 		name = "GFX_trait_keine_commander_peculiarity"
+		texturefile = "gfx/traits/keine_commander_peculiarity_traits.png"
+	}
+	spriteType = {
+		name = "GFX_scientist_trait_keine"
 		texturefile = "gfx/traits/keine_commander_peculiarity_traits.png"
 	}
 	spriteType = {
@@ -197,6 +209,10 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_trait_reimu_commander_peculiarity"
+		texturefile = "gfx/traits/reimu_commander_peculiarity_traits.png"
+	}
+	spriteType = {
+		name = "GFX_scientist_trait_reimu"
 		texturefile = "gfx/traits/reimu_commander_peculiarity_traits.png"
 	}
 	spriteType = {
@@ -232,7 +248,15 @@ spriteTypes = {
 		texturefile = "gfx/traits/kanako_commander_peculiarity_traits.png"
 	}
 	spriteType = {
+		name = "GFX_scientist_trait_kanako"
+		texturefile = "gfx/traits/kanako_commander_peculiarity_traits.png"
+	}
+	spriteType = {
 		name = "GFX_trait_aya_commander_peculiarity"
+		texturefile = "gfx/traits/aya_commander_peculiarity_traits.png"
+	}
+	spriteType = {
+		name = "GFX_scientist_trait_aya"
 		texturefile = "gfx/traits/aya_commander_peculiarity_traits.png"
 	}
 	spriteType = {
@@ -272,6 +296,10 @@ spriteTypes = {
 		texturefile = "gfx/traits/youmu_commander_peculiarity_traits.png"
 	}
 	spriteType = {
+		name = "GFX_scientist_trait_youmu"
+		texturefile = "gfx/traits/youmu_commander_peculiarity_traits.png"
+	}
+	spriteType = {
 		name = "GFX_trait_uuz_supply_grace"
 		texturefile = "gfx/traits/uuz_supply_grace_texticon.png"
 	}
@@ -289,6 +317,10 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_trait_yagokoro_commander_peculiarity"
+		texturefile = "gfx/traits/yagokoro_commander_peculiarity_traits.png"
+	}
+	spriteType = {
+		name = "GFX_scientist_trait_yagokoro"
 		texturefile = "gfx/traits/yagokoro_commander_peculiarity_traits.png"
 	}
 	spriteType = {

@@ -87,6 +87,7 @@ gsk_active_system = {
 			set_variable = { gsk_var_number_of_fumo = 100 }
 			set_variable = { gsk_var_leaders_gui_per_page = 2 }
 			set_variable = { gsk_var_leaders_gui_page = 2 }
+			add_ideas = gsk_main_event_idea
 			set_technology = {
 				shikieiki_attack = 1
 				popup = no

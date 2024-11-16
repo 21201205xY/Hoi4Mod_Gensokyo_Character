@@ -385,6 +385,7 @@ country_event = { #地灵殿Chireiden
 		set_country_flag = koishi_is_recruit_flag
 		gsk_create_satori_operative = yes
 		gsk_create_koishi_operative = yes
+		add_ideas = gsk_main_event_idea
 		if = {
 			limit = {
 				NOT = {

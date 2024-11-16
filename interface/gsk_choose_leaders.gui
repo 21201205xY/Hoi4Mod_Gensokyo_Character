@@ -52,14 +52,6 @@ guiTypes = {
 		# animation_time = 700
 		animation_type = decelerated
 		fade_time = 500
-		buttonType = {
-			name = "close_button"
-			#position = { x = -46 y = 14 }
-			quadTextureSprite = "GFX_closebutton"
-			shortcut = "ESCAPE"
-			Orientation = "UPPER_RIGHT"
-			pdx_tooltip = "CLOSE"
-		}
 		background = {
 			name = "background_down"
 			quadTextureSprite = "GFX_tiled_window_thin_border2"
@@ -1101,6 +1093,15 @@ guiTypes = {
 			text = "[choose_leader_index]"
 			format = center
 			maxWidth = 397
+		}
+		
+		buttonType = {
+			name = "close_button"
+			#position = { x = -46 y = 14 }
+			quadTextureSprite = "GFX_closebutton"
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+			pdx_tooltip = "CLOSE"
 		}
 	}
 }

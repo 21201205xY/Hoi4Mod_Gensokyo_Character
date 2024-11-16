@@ -381,6 +381,11 @@ leader_traits = {
 				has_trait = gsk_houraisan_med1
 				has_trait = gsk_houraisan_med2
 			}
+			FROM = {
+				has_equipment = {
+					gsk_equipment_houraisan_med0 > 0
+				}
+			}
 		}
 		on_add = {
 			add_max_trait = 3
@@ -425,6 +430,11 @@ leader_traits = {
 			NOT = {
 				has_trait = gsk_houraisan_med2
 			}
+			FROM = {
+				has_equipment = {
+					gsk_equipment_houraisan_med0 > 0
+				}
+			}
 		}
 		on_add = {
 			remove_unit_leader_trait = gsk_houraisan_med0
@@ -465,6 +475,11 @@ leader_traits = {
 		}
 		prerequisites = {
 			has_trait = gsk_houraisan_med1
+			FROM = {
+				has_equipment = {
+					gsk_equipment_houraisan_med0 > 0
+				}
+			}
 		}
 		on_add = {
 			remove_unit_leader_trait = gsk_houraisan_med1

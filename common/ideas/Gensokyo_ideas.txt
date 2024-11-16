@@ -295,5 +295,16 @@ ideas = {
 				send_volunteers_tension = -0.3
 			}
 		}
+		gsk_main_event_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				operative_slot = 1
+			}
+		}
 	}
 }

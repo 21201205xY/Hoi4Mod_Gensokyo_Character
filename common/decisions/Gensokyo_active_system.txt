@@ -83,6 +83,10 @@ gsk_active_system = {
 			set_country_flag = shikieiki_is_recruit_flag
 			set_country_flag = kosuzu_is_recruit_flag
 			set_country_flag = gsk_system_is_enable_flag
+			set_country_flag = allow_creat_fumo_flag
+			set_variable = { gsk_var_number_of_fumo = 100 }
+			set_variable = { gsk_var_leaders_gui_per_page = 2 }
+			set_variable = { gsk_var_leaders_gui_page = 2 }
 			set_technology = {
 				shikieiki_attack = 1
 				popup = no
@@ -142,7 +146,7 @@ gsk_active_system = {
 		}
 	}
 	gsk_add_contact_mission = {
-		priority = 498
+		priority = 500
 		activation = {
 			is_ai = no
 			has_country_flag = gsk_begin_add_contact_flag

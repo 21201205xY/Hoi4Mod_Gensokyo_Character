@@ -108,6 +108,25 @@ ideas = {
 		}
 	}
 	hidden_ideas = {
+		has_gsk_leader_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				political_power_gain = 0.3
+				command_power_gain = 0.5
+				surrender_limit = 0.3
+				stability_factor = 0.35
+				war_support_factor = 0.35
+				navy_org_factor = 0.05
+				army_org_factor = 0.05
+				production_speed_buildings_factor = 0.025
+				research_speed_factor = 0.025
+			}
+		}
 		gsk_embodiment_idea_sub0 = {
 			allowed = {
 				always = yes

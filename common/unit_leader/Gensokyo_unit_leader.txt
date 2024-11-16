@@ -351,13 +351,19 @@ leader_traits = {
 			factor = 0
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 	}
 	gsk_houraisan_med0 = {
-		type = all
-		trait_type = personality_trait
-		modifier = {
+		type = corps_commander
+		gain_xp = {
+			always = no
+		}
+		cost = 0
+		trait_type = assignable_trait
+		gui_row = 17
+		gui_column = 0
+		non_shared_modifier = {
 			reassignment_duration_factor = -0.5
 		}
 		field_marshal_modifier = {
@@ -369,14 +375,39 @@ leader_traits = {
 		new_commander_weight = {
 			factor = 0
 		}
+		prerequisites = {
+			has_trait = from_gsk
+			NOT = {
+				has_trait = gsk_houraisan_med1
+				has_trait = gsk_houraisan_med2
+			}
+		}
+		on_add = {
+			add_max_trait = 3
+			FROM = {
+				add_command_power = 15
+				add_equipment_to_stockpile = {
+					type = gsk_equipment_houraisan_med0
+					amount = -1
+					producer = root
+				}
+			}
+		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 	}
 	gsk_houraisan_med1 = {
-		type = all
-		trait_type = personality_trait
-		modifier = {
+		type = corps_commander
+		gain_xp = {
+			always = no
+		}
+		cost = 0
+		trait_type = assignable_trait
+		gui_row = 17
+		gui_column = 1
+		#any_parent = { gsk_houraisan_med0 }
+		non_shared_modifier = {
 			reassignment_duration_factor = -0.7
 		}
 		field_marshal_modifier = {
@@ -388,14 +419,39 @@ leader_traits = {
 		new_commander_weight = {
 			factor = 0
 		}
+		prerequisites = {
+			has_trait = from_gsk
+			has_trait = gsk_houraisan_med0
+			NOT = {
+				has_trait = gsk_houraisan_med2
+			}
+		}
+		on_add = {
+			remove_unit_leader_trait = gsk_houraisan_med0
+			FROM = {
+				add_command_power = 15
+				add_equipment_to_stockpile = {
+					type = gsk_equipment_houraisan_med0
+					amount = -1
+					producer = root
+				}
+			}
+		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 	}
 	gsk_houraisan_med2 = {
-		type = all
-		trait_type = personality_trait
-		modifier = {
+		type = corps_commander
+		gain_xp = {
+			always = no
+		}
+		cost = 0
+		trait_type = assignable_trait
+		gui_row = 17
+		gui_column = 2
+		#any_parent = { gsk_houraisan_med1 }
+		non_shared_modifier = {
 			reassignment_duration_factor = -0.9
 		}
 		field_marshal_modifier = {
@@ -407,8 +463,22 @@ leader_traits = {
 		new_commander_weight = {
 			factor = 0
 		}
+		prerequisites = {
+			has_trait = gsk_houraisan_med1
+		}
+		on_add = {
+			remove_unit_leader_trait = gsk_houraisan_med1
+			FROM = {
+				add_command_power = 15
+				add_equipment_to_stockpile = {
+					type = gsk_equipment_houraisan_med0
+					amount = -1
+					producer = root
+				}
+			}
+		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 	}
 	remilia_commander_peculiarity = {

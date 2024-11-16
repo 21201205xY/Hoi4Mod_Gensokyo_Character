@@ -64,8 +64,8 @@ country_event = {
 		hidden_effect = {
 			ROOT = {
 				set_variable = { gsk_var_number_of_contact = 0 }
-				set_variable = { gsk_var_leaders_gui_per_page = 0 }
-				set_variable = { gsk_var_leaders_gui_page = 0 }
+				set_variable = { gsk_var_leaders_gui_per_page = 2 }
+				set_variable = { gsk_var_leaders_gui_page = 2 }
 			}
 		}
 	}

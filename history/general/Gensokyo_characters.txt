@@ -250,7 +250,7 @@ every_possible_country = {
 			planning_skill = 4
 			logistics_skill = 3
 			skill = 3
-			visible = { 
+			visible = {
 				is_ai = no
 				has_country_flag = akyuu_is_recruit_flag
 			}

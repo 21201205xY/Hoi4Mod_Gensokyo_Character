@@ -55,6 +55,84 @@ gsk_recruit_character_interaction = {
 	# 	remove_effect = {
 	# 	}
 	# }
+	gsk_begin_add_fumo = {
+		priority = 500
+		allowed = {
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 10
+		}
+		visible = {
+			is_ai = no
+			has_country_flag = gsk_system_is_enable_flag
+			has_country_flag = allow_creat_fumo_flag
+			NOT = {
+				has_country_flag = gsk_begin_add_fumo_flag
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			set_country_flag = gsk_begin_add_fumo_flag
+			add_dynamic_modifier = {
+				modifier = gsk_dym_add_fumo
+			}
+		}
+		remove_effect = {
+		}
+	}
+	gsk_add_fumo_mission = {
+		priority = 501
+		activation = {
+			is_ai = no
+			has_country_flag = gsk_begin_add_fumo_flag
+		}
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+			NOT = {
+				has_country_flag = gsk_begin_add_fumo_flag
+			}
+		}
+		#icon = mission_icon     # For GFX_decision_mission_icon
+		is_good = yes
+		days_mission_timeout = 100
+		selectable_mission = no
+		complete_effect = {
+
+		}
+		timeout_effect = {
+			custom_effect_tooltip = gsk_add_fumo_mission_tt
+			add_to_variable = {
+				value = 1
+				var = gsk_var_number_of_fumo
+			}
+			activate_mission = gsk_add_fumo_mission
+		}
+	}
+	gsk_end_add_fumo = {
+		priority = 499
+		allowed = {
+		}
+		available = {
+		}
+		visible = {
+			is_ai = no
+			has_country_flag = gsk_system_is_enable_flag
+			has_country_flag = gsk_begin_add_fumo_flag
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			remove_dynamic_modifier = {
+				modifier = gsk_dym_add_fumo
+			}
+			clr_country_flag = gsk_begin_add_fumo_flag
+		}
+		remove_effect = {
+		}
+	}
 	embodiment_of_Scarlet_Devil_quest1 = { #红魔馆任务:芙兰想要玩耍！
 		priority = 300
 		allowed = {
@@ -437,7 +515,6 @@ gsk_recruit_character_interaction = {
 		}
 		available = {
 			has_country_flag = yagokoro_is_recruit_flag
-			#num_of_available_civilian_factories > 5
 			num_of_civilian_factories_available_for_projects > 5
 		}
 		visible = {
@@ -531,7 +608,6 @@ gsk_recruit_character_interaction = {
 		visible = {
 			has_country_flag = gsk_system_is_enable_flag
 			has_country_flag = kaguya_is_recruit_flag
-			has_dlc = "Arms Against Tyranny"
 			num_of_factories > 200
 		}
 		fire_only_once = no
@@ -585,7 +661,6 @@ gsk_recruit_character_interaction = {
 		visible = {
 			has_country_flag = gsk_system_is_enable_flag
 			has_country_flag = kaguya_is_recruit_flag
-			has_dlc = "Arms Against Tyranny"
 			AND = {
 				num_of_factories > 100
 				num_of_factories < 200
@@ -642,7 +717,6 @@ gsk_recruit_character_interaction = {
 		visible = {
 			has_country_flag = gsk_system_is_enable_flag
 			has_country_flag = kaguya_is_recruit_flag
-			has_dlc = "Arms Against Tyranny"
 			num_of_factories < 100
 		}
 		fire_only_once = no
@@ -682,6 +756,9 @@ gsk_recruit_character_interaction = {
 			}
 		}
 	}
+#################################################################################################
+########                        所有蓬莱提神药特质增加放在了角色特质里                      ########
+#################################################################################################
 	gsk_role_list_use_all0 = {
 		priority = 80
 		allowed = {

@@ -337,6 +337,7 @@
   gsk_equipment_houraisan_med0_desc:0 "Houraisan Elixir, can be used on characters in decisions to increase the number of divisions led by the character."
   gsk_equipment_houraisan_med_desc:0 "Houraisan Elixir, can be used on characters in decisions to increase the number of divisions a character leads."
   eientei_quest2:0 "Expand the character list and select a character to use Penglai Refreshing Medicine"
+  eientei_quest2_desc:0 "§RIt is now possible to select trait activation directly under the original trait in the character trait assignment screen. This decision is retained to prevent other mod conflicts from selecting trait§!"
   eientei_quest2.tt:0 "After use, the number of divisions led by the character will increase. Each character can use it three times."
   eientei_quest3:0 "Close character list"
   gsk_role_list_use_all0:0 "Use Penglai Refreshing Medicine once for all characters who have not used Penglai Medicine before."

@@ -73,6 +73,12 @@ country_event = {
 		name = gsk_main_event.21.a
 		custom_effect_tooltip = gsk_main_event.21.tt
 		set_country_flag = gsk_system_is_enable_flag
+		hidden_effect = {
+			country_event = {
+				days = 20
+				id = gsk_main_event.110
+			}
+		}
 		ai_chance = {
 			base = 0
 		}
@@ -331,8 +337,8 @@ country_event = {
 # 		}
 # 	}
 # }
-#守矢神社
-country_event = {
+
+country_event = { #守矢神社
 	id = gsk_main_event.70
 	title = gsk_main_event.70.t
 	desc = gsk_main_event.70.d
@@ -407,6 +413,7 @@ country_event = { #地灵殿Chireiden
 		set_country_flag = already_exploring_chireiden_flag
 		gsk_create_satori_operative = yes
 		gsk_create_koishi_operative = yes
+		add_ideas = gsk_main_event_idea
 		if = {
 			limit = {
 				NOT = {
@@ -476,6 +483,35 @@ country_event = {
 		name = gsk_main_event.100.b
 		custom_effect_tooltip = gsk_main_event.recruit.tt
 		set_country_flag = already_exploring_eientei_flag
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+#秘封
+country_event = {
+	id = gsk_main_event.110
+	title = gsk_main_event.110.t
+	desc = gsk_main_event.110.d
+	picture = gsk_main_event.110.p
+	fire_only_once = no
+	is_triggered_only = yes
+	immediate = {
+
+	}
+	option = {
+		name = gsk_main_event.110.a
+		custom_effect_tooltip = gsk_main_event.110.a.tt
+		set_country_flag = hearn_is_recruit_flag
+		set_country_flag = renko_is_recruit_flag
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		name = gsk_main_event.110.b
+		custom_effect_tooltip = gsk_main_event.recruit.tt
+		set_country_flag = already_exploring_hearnandrenko_flag
 		ai_chance = {
 			base = 0
 		}

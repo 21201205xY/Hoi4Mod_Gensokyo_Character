@@ -95,6 +95,11 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 		iconType = {
+			name = "background_hearnandrenko"
+			spriteType = "GFX_background_other"
+			alwaystransparent = yes
+		}
+		iconType = {
 			name = "background_other"
 			spriteType = "GFX_background_other"
 			position = { x = 0 y = 0 }
@@ -257,19 +262,19 @@ guiTypes = {
 			maxWidth = 146
 		}
 		buttonType = {
-			name = "choose_none"
+			name = "choose_hearnandrenko"
 			position = { x = @pre_choose_row_2 y = @pre_choose_col_1 }
 			quadTextureSprite = "GFX_btn_dropdown"
 			scale = 0.6
 			#pdx_tooltip = choose_eientei_button_tt
 		}
 		instantTextboxType = {
-			name = "choose_none_tt"
+			name = "choose_hearnandrenko_tt"
 			position = { x = @pre_choose_row_2 y = 138 }
 			orientation = UPPER_LEFT
 			font = "hoi_18mbs"
 			alwaystransparent = yes
-			#text = choose_eientei_button_tt
+			text = choose_hearnandrenko_button_tt
 			format = center
 			maxWidth = 146
 		}
@@ -609,6 +614,20 @@ guiTypes = {
 			position = { x = @row_scale_15 y = @col_scale_45 }
 			quadTextureSprite = GFX_portrait_gsk_alice
 			pdx_tooltip = gsk_alice_name
+			scale = 0.6
+		}
+		buttonType = { #秘封
+			name = "choose_renko"
+			position = { x = @row_scale_15 y = @col_scale_2 }
+			quadTextureSprite = GFX_portrait_renko
+			pdx_tooltip = renko_name
+			scale = 0.6
+		}
+		buttonType = {
+			name = "choose_hearn"
+			position = { x = @row_scale_35 y = @col_scale_2 }
+			quadTextureSprite = GFX_portrait_hearn
+			pdx_tooltip = hearn_name
 			scale = 0.6
 		}
 
@@ -1021,6 +1040,27 @@ guiTypes = {
 			font = "hoi_18mbs"
 			alwaystransparent = yes
 			text = yagokoro_name
+			format = center
+			maxWidth = 146
+		}
+	#秘封名字
+		instantTextboxType = {
+			name = "renko_name"
+			position = { x = 122 y = 330 }
+			orientation = UPPER_LEFT
+			font = "hoi_18mbs"
+			alwaystransparent = yes
+			text = renko_name
+			format = center
+			maxWidth = 146
+		}
+		instantTextboxType = {
+			name = "hearn_name"
+			position = { x = 322 y = 330 }
+			orientation = UPPER_LEFT
+			font = "hoi_18mbs"
+			alwaystransparent = yes
+			text = hearn_name
 			format = center
 			maxWidth = 146
 		}

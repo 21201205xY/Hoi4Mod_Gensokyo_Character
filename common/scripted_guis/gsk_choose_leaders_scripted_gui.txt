@@ -19,6 +19,7 @@ scripted_gui = {
 			choose_hakugyokurou_visible = { check_variable = { gsk_var_leaders_gui_per_page = 2 } }
 			choose_eientei_visible = { check_variable = { gsk_var_leaders_gui_per_page = 2 } }
 			choose_other_visible = { check_variable = { gsk_var_leaders_gui_per_page = 2 } }
+			choose_hearnandrenko_visible = { check_variable = { gsk_var_leaders_gui_per_page = 2 } }
 			#choose_lunar_capital_click = { check_variable = { gsk_var_leaders_gui_per_page = 2 } }
 
 			background_scarlet_devil_visible = { check_variable = { gsk_var_leaders_gui_page = 2 } }
@@ -29,6 +30,7 @@ scripted_gui = {
 			background_hakugyokurou_visible = { check_variable = { gsk_var_leaders_gui_page = 13 } }
 			background_eientei_visible = { check_variable = { gsk_var_leaders_gui_page = 17 } }
 			background_other_visible = { check_variable = { gsk_var_leaders_gui_page = 19 } }
+			background_hearnandrenko_visible = { check_variable = { gsk_var_leaders_gui_page = 23 } }
 
 			choose_remilia_visible = { check_variable = { gsk_var_leaders_gui_page = 2 } }
 			choose_flandre_visible = { check_variable = { gsk_var_leaders_gui_page = 2 } }
@@ -97,6 +99,11 @@ scripted_gui = {
 			kogasa_name_visible = { check_variable = { gsk_var_leaders_gui_page = 19 } }
 			shikieiki_name_visible = { check_variable = { gsk_var_leaders_gui_page = 19 } }
 			gsk_alice_name_visible = { check_variable = { gsk_var_leaders_gui_page = 19 } }
+
+			choose_renko_visible = { check_variable = { gsk_var_leaders_gui_page = 23 } }
+			choose_hearn_visible = { check_variable = { gsk_var_leaders_gui_page = 23 } }
+			renko_name_visible = { check_variable = { gsk_var_leaders_gui_page = 23 } }
+			hearn_name_visible = { check_variable = { gsk_var_leaders_gui_page = 23 } }
 		}
 		effects = {
 			# pre_button_click = {
@@ -140,6 +147,7 @@ scripted_gui = {
 			choose_hakugyokurou_click = { set_variable = { gsk_var_leaders_gui_page = 13 } }
 			choose_eientei_click = { set_variable = { gsk_var_leaders_gui_page = 17 } }
 			choose_other_click = { set_variable = { gsk_var_leaders_gui_page = 19 } }
+			choose_hearnandrenko_click = { set_variable = { gsk_var_leaders_gui_page = 23 } }
 			#choose_hakugyokurou = { set_variable = { gsk_var_leaders_gui_page = 0 } }
 
 			advisor_1_trait_click = { set_variable = { gsk_var_leaders_choose_per_index = 2 } }

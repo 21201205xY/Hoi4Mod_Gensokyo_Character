@@ -119,4 +119,12 @@ spriteTypes = {
 		name = "GFX_portrait_koishi_intel"
 		texturefile = "gfx/leaders/gsk_leader_koishi.dds"
 	}
+	SpriteType = {
+		name = "GFX_portrait_renko"
+		texturefile = "gfx/leaders/gsk_leader_renko.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_hearn"
+		texturefile = "gfx/leaders/gsk_leader_hearn.dds"
+	}
 }

@@ -29,6 +29,8 @@ gsk_leader_yuka.png 101560824 Orchid - オルキド
 gsk_leader_yukari.png 54655598 蒼咲ゆきな＠2日目東ス84a
 gsk_leader_yuyuko.png 108068877 miy@
 gsk_leader_shikieiki.dds 54061278 乃樹坂くしお
+gsk_leader_renko.dds 59422378 Lumo_1121
+gsk_leader_hearn.dds 105630711 蟻丼
 gsk_hire_event.33.png 9851575 ふぐの
 gsk_hire_event.71.png 106827537 Munchem-慕尼
 gsk_hire_event.72.png 93204135 柏森たま。

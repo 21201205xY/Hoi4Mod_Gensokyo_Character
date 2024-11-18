@@ -82,6 +82,8 @@ gsk_active_system = {
 			set_country_flag = kogasa_is_recruit_flag
 			set_country_flag = shikieiki_is_recruit_flag
 			set_country_flag = kosuzu_is_recruit_flag
+			set_country_flag = hearn_is_recruit_flag
+			set_country_flag = renko_is_recruit_flag
 			set_country_flag = gsk_system_is_enable_flag
 			set_country_flag = allow_creat_fumo_flag
 			set_variable = { gsk_var_number_of_fumo = 100 }
@@ -659,6 +661,32 @@ gsk_active_system = {
 			custom_effect_tooltip = gsk_main_event.100.a.tt
 			set_country_flag = tewi_is_recruit_flag
 			set_country_flag = reisen_is_recruit_flag
+		}
+	}
+	gsk_hearnandrenko_2 = {
+		priority = 96
+		allowed = {
+		}
+		available = {
+		}
+		visible = {
+			has_country_flag = gsk_system_is_enable_flag
+			has_country_flag = already_exploring_hearnandrenko_flag
+			not = {
+				has_country_flag = hearn_is_recruit_flag
+				has_country_flag = renko_is_recruit_flag
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			custom_effect_tooltip = gsk_main_event.110.a.tt
+			set_country_flag = hearn_is_recruit_flag
+			set_country_flag = renko_is_recruit_flag
 		}
 	}
 	gsk_other_role_recruitment0 = {

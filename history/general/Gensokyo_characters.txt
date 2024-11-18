@@ -1493,4 +1493,157 @@ every_possible_country = {
 			}
 		}
 	}
+	generate_character = {#莲子
+		token_base = gsk_commander_renko
+		name = renko_name
+		portraits={
+			army={
+				large= "GFX_portrait_renko"
+				small="gfx/ideas/gsk_ideas_renko.dds"
+			}
+		}
+		allowed_civil_war = {
+			is_ai = no
+		}
+		corps_commander = {
+			traits = {
+				from_gsk
+				gsk_race_human
+				renko_commander_peculiarity
+			}
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 4
+			skill = 3
+			visible = {
+				is_ai = no
+				has_country_flag = renko_is_recruit_flag
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = gsk_advisor_renko
+			ledger = army
+			desc = advisor_renko_desc
+			cost = 100
+			visible = { 
+				is_ai = no
+				has_country_flag = gsk_system_is_enable_flag
+			}
+			available = {
+				has_country_flag = renko_is_recruit_flag
+			}
+			traits = {
+				gsk_advisor_renko
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		scientist = {
+			visible = {
+				owner = {
+					is_ai = no
+					has_country_flag = gsk_system_is_enable_flag
+					has_country_flag = renko_is_recruit_flag
+				}
+			}
+			traits = {
+				scientist_trait_renko
+				scientist_trait_genius
+			}
+			skills = {
+				specialization_nuclear = 1
+			}
+		}
+	}
+	generate_character = { #梅莉
+		token_base = gsk_commander_hearn
+		name = hearn_name
+		portraits={
+			army={
+				large="gfx/leaders/gsk_leader_hearn.dds"
+				small="gfx/ideas/gsk_ideas_hearn.dds"
+			}
+		}
+		allowed_civil_war = {
+			is_ai = no
+		}
+		corps_commander = {
+			traits = {
+				from_gsk
+				gsk_race_human
+				hearn_commander_peculiarity
+			}
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 2
+			skill = 3
+			visible = { 
+				is_ai = no
+				has_country_flag = hearn_is_recruit_flag
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = gsk_advisor_hearn
+			ledger = army
+			desc = advisor_hearn_desc
+			cost = 100
+			visible = { 
+				is_ai = no
+				has_country_flag = gsk_system_is_enable_flag
+			}
+			available = {
+				has_country_flag = hearn_is_recruit_flag
+			}
+			traits = {
+				gsk_advisor_hearn
+			}
+			on_add = {
+				FROM = {
+					every_unit_leader = {
+						limit = {
+							has_trait = renko_commander_peculiarity
+						}
+						remove_unit_leader_trait = renko_commander_peculiarity
+						add_unit_leader_trait = renko_commander_peculiarity1
+					}
+				}
+				custom_effect_tooltip = gsk_advisor_hearn_tt
+			}
+			on_remove = {
+				FROM = {
+					every_unit_leader = {
+						limit = {
+							has_trait = renko_commander_peculiarity1
+						}
+						remove_unit_leader_trait = renko_commander_peculiarity1
+						add_unit_leader_trait = renko_commander_peculiarity
+					}
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		scientist = {
+			visible = {
+				owner = {
+					is_ai = no
+					has_country_flag = gsk_system_is_enable_flag
+					has_country_flag = hearn_is_recruit_flag
+				}
+			}
+			traits = {
+				scientist_trait_hearn
+				scientist_trait_genius
+			}
+			skills = {
+				specialization_land = 1
+			}
+		}
+	}
 }

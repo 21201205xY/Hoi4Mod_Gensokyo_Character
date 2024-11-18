@@ -60,3 +60,19 @@ scientist_trait_keine = {
 		scientist_breakthrough_bonus_factor = -0.03
 	}
 }
+scientist_trait_renko = {
+	icon = GFX_scientist_trait_renko
+	modifier = {
+		special_project_speed_factor = 0.15
+		scientist_breakthrough_bonus_factor = 0.05
+		scientist_research_bonus_factor = 0.1
+	}
+}
+scientist_trait_hearn = {
+	icon = GFX_scientist_trait_hearn
+	modifier = {
+		special_project_speed_factor = 0.05
+		scientist_breakthrough_bonus_factor = 0.15
+		scientist_research_bonus_factor = 0.1
+	}
+}

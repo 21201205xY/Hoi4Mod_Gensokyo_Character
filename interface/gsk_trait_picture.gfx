@@ -355,4 +355,24 @@ spriteTypes = {
 		name = "GFX_trait_shikieiki_commander_peculiarity"
 		texturefile = "gfx/traits/shikieiki_commander_peculiarity_traits.png"
 	}
+	spriteType = {
+		name = "GFX_trait_renko_commander_peculiarity"
+		texturefile = "gfx/traits/renko_commander_peculiarity_traits.png"
+	}
+	spriteType = {
+		name = "GFX_trait_renko_commander_peculiarity1"
+		texturefile = "gfx/traits/renko_commander_peculiarity_traits.png"
+	}
+	spriteType = {
+		name = "GFX_scientist_trait_renko"
+		texturefile = "gfx/traits/renko_commander_peculiarity_traits.png"
+	}
+	spriteType = {
+		name = "GFX_trait_hearn_commander_peculiarity"
+		texturefile = "gfx/traits/hearn_commander_peculiarity_traits.png"
+	}
+	spriteType = {
+		name = "GFX_scientist_trait_hearn"
+		texturefile = "gfx/traits/hearn_commander_peculiarity_traits.png"
+	}
 }

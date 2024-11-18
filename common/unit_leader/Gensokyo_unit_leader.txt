@@ -1284,4 +1284,55 @@ leader_traits = {
 			factor = 0
 		}
 	}
+	renko_commander_peculiarity = {
+		type = all
+		trait_type = personality_trait
+		modifier = {
+			army_attack_against_major_factor = 0.2
+			army_breakthrough_against_major_factor = 0.2
+			army_defence_against_major_factor = 0.2
+		}
+		non_shared_modifier = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	renko_commander_peculiarity1 = {
+		type = all
+		trait_type = personality_trait
+		modifier = {
+			army_attack_against_major_factor = 0.4
+			army_breakthrough_against_major_factor = 0.4
+			army_defence_against_major_factor = 0.4
+		}
+		non_shared_modifier = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	hearn_commander_peculiarity = {
+		type = all
+		trait_type = personality_trait
+		modifier = {
+			army_attack_against_minor_factor = 0.2
+			army_breakthrough_against_minor_factor = 0.2
+			army_defence_against_minor_factor = 0.2
+		}
+		non_shared_modifier = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
 }

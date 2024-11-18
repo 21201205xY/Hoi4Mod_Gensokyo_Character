@@ -17,9 +17,12 @@ leader_traits = {
 	    random = no
 
 		attrition = -0.15
-		supply_node_range = 0.05
-		supply_factor = 0.15
-		supply_consumption_factor = -0.15
+		supply_node_range = 0.15
+		supply_factor = 0.1
+		supply_consumption_factor = -0.1
+		production_speed_supply_node_factor = 3
+		command_cap_increase = 20
+		#command_power = 0
 		
 		ai_will_do = {
 			factor = 1
@@ -69,6 +72,8 @@ leader_traits = {
 		air_weather_penalty = -0.3
 		air_mission_efficiency = 0.2
 		air_range_factor = 0.2
+		command_cap_increase = 20
+		#command_power = 0
 		
 		ai_will_do = {
 			factor = 1
@@ -80,6 +85,8 @@ leader_traits = {
 		army_artillery_attack_factor = 0.2
 		air_strategic_bomber_bombing_factor = 0.5
 		rocket_attack_factor = 1
+		command_cap_increase = 20
+		#command_power = 0
 		
 		ai_will_do = {
 			factor = 1
@@ -92,6 +99,8 @@ leader_traits = {
 		experience_gain_navy = 0.5
 		sortie_efficiency = 0.15
 		carrier_traffic = 0.2
+		command_cap_increase = 20
+		#command_power = 0
 		# equipment_bonus = {
 		#     carrier = {
 		# 		carrier_size = 1
@@ -109,6 +118,8 @@ leader_traits = {
 		army_armor_defence_factor = 0.05
 		mechanized_attack_factor = 0.1
 		mechanized_defence_factor = 0.1
+		command_cap_increase = 20
+		#command_power = 0
 		equipment_bonus = {
 			modern_tank_chassis = {
 				hard_attack = 0.15
@@ -126,10 +137,10 @@ leader_traits = {
 	gsk_advisor_aya = {
 		random = no
 		
-		enemy_intel_network_gain_factor_over_occupied_tag = 0.1
+		enemy_intel_network_gain_factor_over_occupied_tag = 0.25
 		political_power_factor = 0.25
 		drift_defence_factor = 0.3
-		political_power_gain = 0.5
+		political_power_gain = 1
 		
 		ai_will_do = {
 			factor = 1
@@ -138,8 +149,8 @@ leader_traits = {
 	gsk_advisor_satori = {
 		random = no
 		
-		enemy_operative_detection_chance = 20
-		operative_slot = 1
+		enemy_operative_detection_chance = 80
+		operative_slot = 2
 		decryption_power_factor = 0.3
 		intel_network_gain_factor = 0.3
 		
@@ -153,7 +164,7 @@ leader_traits = {
 		own_operative_detection_chance_factor = -0.25
 		own_operative_intel_extraction_rate = -0.25
 		foreign_subversive_activites = -0.3
-		new_operative_slot_bonus = 1
+		new_operative_slot_bonus = 2
 		
 		ai_will_do = {
 			factor = 1
@@ -178,6 +189,8 @@ leader_traits = {
 		army_attack_factor = 0.05
 		army_infantry_attack_factor = 0.15
 		army_infantry_defence_factor = 0.15
+		command_cap_increase = 20
+		#command_power = 0
 		
 		ai_will_do = {
 			factor = 1
@@ -189,6 +202,8 @@ leader_traits = {
 		experience_gain_army = 0.5
 		army_org_regain = 0.15
 		army_org_factor = 0.1
+		command_cap_increase = 20
+		#command_power = 0
 		equipment_bonus = {
 			infantry_equipment = {
 				build_cost_ic = -0.05
@@ -207,6 +222,8 @@ leader_traits = {
 		air_night_penalty = -0.3
 		air_strategic_bomber_night_penalty = -0.5
 		air_close_air_support_org_damage_factor = 0.15
+		command_cap_increase = 20
+		#command_power = 0
 		
 		ai_will_do = {
 			factor = 1
@@ -216,9 +233,12 @@ leader_traits = {
 		random = no
 		
 		army_strength_factor = 0.05
-		research_speed_factor = 0.05
 		experience_loss_factor = -0.3
-		production_speed_supply_node_factor = 3
+		weekly_manpower = 600
+		#scientist_breakthrough_bonus_factor = 0.15
+		#special_project_speed_factor = 0.15
+		command_cap_increase = 20
+		#command_power = 0
 		
 		ai_will_do = {
 			factor = 1
@@ -243,6 +263,8 @@ leader_traits = {
 		conscription = 0.02
 		required_garrison_factor = -0.15
 		resistance_target = -0.15
+		command_cap_increase = 20
+		#command_power = 0
 		
 		ai_will_do = {
 			factor = 1
@@ -255,29 +277,21 @@ leader_traits = {
 		production_speed_buildings_factor = 0.05
 		land_bunker_effectiveness_factor = 0.2
 		coastal_bunker_effectiveness_factor = 0.2
+		command_cap_increase = 20
+		#command_power = 0
 
 		ai_will_do = {
 			factor = 1
 		}
 	}
-	# gsk_advisor_shikieiki = {
-	# 	random = no
-		
-	# 	civilian_intel_factor = 0.5
-	# 	navy_intel_factor = 0.5
-	# 	army_intel_factor = 0.5
-	# 	airforce_intel_factor = 0.5
-
-	# 	ai_will_do = {
-	# 		factor = 1
-	# 	}
-	# }
 	gsk_advisor_shikieiki = {
 		random = no
 		
 		resistance_growth_on_our_occupied_states = 0.5
 		required_garrison_factor = -0.25
 		resistance_target = -0.25
+		command_cap_increase = 20
+		#command_power = 0
 
 		ai_will_do = {
 			factor = 1
@@ -289,6 +303,25 @@ leader_traits = {
 		research_speed_factor = 0.1
 		command_power_gain = 0.3
 		command_power_gain_mult = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	gsk_advisor_hearn = {
+		random = no
+		
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	gsk_advisor_renko = {
+		random = no
+
+		production_speed_facility_factor = 0.2
+		special_project_speed_factor = 0.2
+		special_project_facility_supply_consumption_factor = -0.2
 
 		ai_will_do = {
 			factor = 1

@@ -21,6 +21,7 @@ country_event = {
 				id = gsk_hire_event.32
 				days = 3
 			}
+			gsk_check_alice_canbe_recruit = yes
 		}
 		ai_chance = {
 			base = 0
@@ -39,6 +40,7 @@ country_event = {
 			state = root.capital
 			controller = root
 			use_nuke = yes
+			nuke_type = nuclear_bomb
 		}
 	}
 	option = {
@@ -294,6 +296,10 @@ country_event = {
 	option = {
 		name = gsk_hire_event.72.a
 		custom_effect_tooltip = gsk_hire_event.72.a.tt
+		add_breakthrough_points = {
+			specialization = specialization_land
+			value = 1
+		}
 		add_tech_bonus = {
 			bonus = 1
 			uses = 1

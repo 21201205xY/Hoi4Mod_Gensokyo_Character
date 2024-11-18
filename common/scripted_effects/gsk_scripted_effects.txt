@@ -483,3 +483,56 @@ gsk_decrease_kaguya_design_bureau_idae = {
 		}
 	}
 }
+
+gsk_create_satori_operative = {
+	create_operative_leader = {
+		name = satori_name
+		traits = { 
+			satori_spy_peculiarity 
+			operative_infiltrator
+			operative_seducer
+			operative_natural_orator
+		}
+		female = yes
+		bypass_recruitment = yes
+		nationalities = { ROOT GSK }
+		GFX = GFX_portrait_satori_intel
+	}
+}
+
+gsk_create_koishi_operative = {
+	create_operative_leader = {
+		name = koishi_name
+		traits = { 
+			koishi_spy_peculiarity
+			operative_infiltrator
+			operative_seducer
+			operative_escape_artist
+		}	
+		female = yes
+		bypass_recruitment = yes
+		nationalities = { ROOT GSK }
+		GFX = GFX_portrait_koishi_intel
+	}
+}
+
+gsk_check_alice_canbe_recruit = {
+	if = {
+		limit = {
+			is_ai = no
+			has_country_flag = gsk_system_is_enable_flag
+			has_country_flag = marisa_is_recruit_flag
+			has_country_flag = patchouli_is_recruit_flag
+			not = {
+				OR = {
+					has_country_flag = gsk_alice_is_recruit_flag
+					has_country_flag = gsk_alice_is_recruit_flag1
+				}
+			}
+		}
+		country_event = {
+			days = 20
+			id = gsk_main_event.60
+		}
+	}
+}

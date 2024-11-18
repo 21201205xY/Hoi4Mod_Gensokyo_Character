@@ -84,6 +84,10 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/gsk_main_event.100.png"
 	}
 	spriteType = {
+		name = "gsk_main_event.110.p"
+		texturefile = "gfx/event_pictures/gsk_main_event.110.png"
+	}
+	spriteType = {
 		name = "gsk_hire_event.101.p"
 		texturefile = "gfx/event_pictures/gsk_hire_event.101.png"
 	}

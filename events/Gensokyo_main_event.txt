@@ -60,10 +60,25 @@ country_event = {
 	picture = gsk_main_event.21.p
 	fire_only_once = no
 	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			ROOT = {
+				set_variable = { gsk_var_number_of_contact = 0 }
+				set_variable = { gsk_var_leaders_gui_per_page = 2 }
+				set_variable = { gsk_var_leaders_gui_page = 2 }
+			}
+		}
+	}
 	option = { 
 		name = gsk_main_event.21.a
 		custom_effect_tooltip = gsk_main_event.21.tt
 		set_country_flag = gsk_system_is_enable_flag
+		hidden_effect = {
+			country_event = {
+				days = 20
+				id = gsk_main_event.110
+			}
+		}
 		ai_chance = {
 			base = 0
 		}
@@ -111,9 +126,7 @@ country_event = {
 		}
 	}
 }
-
-#红魔馆事件
-country_event = {
+country_event = { #红魔馆
 	id = gsk_main_event.30
 	title = gsk_main_event.30.t
 	desc = gsk_main_event.30.d
@@ -146,8 +159,7 @@ country_event = {
 		}
 	}
 }
-#人间之里
-country_event = {
+country_event = { #人间之里
 	id = gsk_main_event.40
 	title = gsk_main_event.40.t
 	desc = gsk_main_event.40.d
@@ -174,8 +186,7 @@ country_event = {
 		}
 	}
 }
-#博丽神社
-country_event = {
+country_event = { #博丽神社
 	id = gsk_main_event.50
 	title = gsk_main_event.50.t
 	desc = gsk_main_event.50.d
@@ -217,6 +228,9 @@ country_event = {
 		custom_effect_tooltip = gsk_main_event.51.a.tt
 		set_country_flag = reimu_is_recruit_flag
 		set_country_flag = marisa_is_recruit_flag
+		hidden_effect = {
+			gsk_check_alice_canbe_recruit = yes
+		}
 		ai_chance = {
 			base = 0
 		}
@@ -256,19 +270,19 @@ country_event = {
 	desc = gsk_main_event.60.d
 	picture = gsk_main_event.60.p
 	fire_only_once = no
-	is_triggered_only = no
-	trigger = {
-		is_ai = no
-		has_country_flag = gsk_system_is_enable_flag
-		has_country_flag = marisa_is_recruit_flag
-		has_country_flag = patchouli_is_recruit_flag
-		not = {
-			OR = {
-				has_country_flag = gsk_alice_is_recruit_flag
-				has_country_flag = gsk_alice_is_recruit_flag1
-			}
-		}
-	}
+	is_triggered_only = yes
+	# trigger = {
+	# 	is_ai = no
+	# 	has_country_flag = gsk_system_is_enable_flag
+	# 	has_country_flag = marisa_is_recruit_flag
+	# 	has_country_flag = patchouli_is_recruit_flag
+	# 	not = {
+	# 		OR = {
+	# 			has_country_flag = gsk_alice_is_recruit_flag
+	# 			has_country_flag = gsk_alice_is_recruit_flag1
+	# 		}
+	# 	}
+	# }
 	immediate = {
 	}
 	option = {
@@ -323,8 +337,8 @@ country_event = {
 # 		}
 # 	}
 # }
-#守矢神社
-country_event = {
+
+country_event = { #守矢神社
 	id = gsk_main_event.70
 	title = gsk_main_event.70.t
 	desc = gsk_main_event.70.d
@@ -360,8 +374,7 @@ country_event = {
 		}
 	}
 }
-#地灵殿Chireiden
-country_event = {
+country_event = { #地灵殿Chireiden
 	id = gsk_main_event.80
 	title = gsk_main_event.80.t
 	desc = gsk_main_event.80.d
@@ -376,9 +389,19 @@ country_event = {
 		custom_effect_tooltip = gsk_main_event.80.a.tt
 		set_country_flag = satori_is_recruit_flag
 		set_country_flag = koishi_is_recruit_flag
-		create_intelligence_agency = {
-			name = "地灵殿"
-			icon = GFX_intelligence_agency_logo_generic_2
+		gsk_create_satori_operative = yes
+		gsk_create_koishi_operative = yes
+		add_ideas = gsk_main_event_idea
+		if = {
+			limit = {
+				NOT = {
+					has_intelligence_agency = yes
+				}
+			}
+			create_intelligence_agency = {
+				name = "地灵殿"
+				icon = GFX_intelligence_agency_logo_generic_2
+			}
 		}
 		ai_chance = {
 			base = 0
@@ -388,9 +411,19 @@ country_event = {
 		name = gsk_main_event.80.b
 		custom_effect_tooltip = gsk_main_event.recruit.tt
 		set_country_flag = already_exploring_chireiden_flag
-		create_intelligence_agency = {
-			name = "地灵殿"
-			icon = GFX_intelligence_agency_logo_generic_2
+		gsk_create_satori_operative = yes
+		gsk_create_koishi_operative = yes
+		add_ideas = gsk_main_event_idea
+		if = {
+			limit = {
+				NOT = {
+					has_intelligence_agency = yes
+				}
+			}
+			create_intelligence_agency = {
+				name = "地灵殿"
+				icon = GFX_intelligence_agency_logo_generic_2
+			}
 		}
 		ai_chance = {
 			base = 0
@@ -455,6 +488,35 @@ country_event = {
 		}
 	}
 }
+#秘封
+country_event = {
+	id = gsk_main_event.110
+	title = gsk_main_event.110.t
+	desc = gsk_main_event.110.d
+	picture = gsk_main_event.110.p
+	fire_only_once = no
+	is_triggered_only = yes
+	immediate = {
+
+	}
+	option = {
+		name = gsk_main_event.110.a
+		custom_effect_tooltip = gsk_main_event.110.a.tt
+		set_country_flag = hearn_is_recruit_flag
+		set_country_flag = renko_is_recruit_flag
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		name = gsk_main_event.110.b
+		custom_effect_tooltip = gsk_main_event.recruit.tt
+		set_country_flag = already_exploring_hearnandrenko_flag
+		ai_chance = {
+			base = 0
+		}
+	}
+}
 #检测tno
 country_event = { 
 	id = gsk_main_event.1000
@@ -465,6 +527,11 @@ country_event = {
 	trigger = {
 		has_global_flag = ofn_cps_embargo
 		is_ai = no
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = sanae_is_recruit_flag
+		}
 	}
 	option = {
 		name = gsk_main_event.1000.a

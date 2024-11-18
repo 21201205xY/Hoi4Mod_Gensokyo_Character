@@ -208,6 +208,24 @@ every_possible_country = {
 				factor = 1
 			}
 		}
+		scientist = {
+			visible = {
+				owner = {
+					is_ai = no
+					has_country_flag = patchouli_is_recruit_flag
+					has_country_flag = gsk_system_is_enable_flag
+				}
+			}
+			traits = {
+				scientist_trait_patchouli
+				scientist_trait_genius
+				scientist_trait_brilliant_theorist
+				scientist_trait_nuclear_specialist
+			}
+			skills = {
+				specialization_nuclear = 3
+			}
+		}
 	}
 	generate_character = {#阿求
 		token_base = gsk_commander_akyuu
@@ -232,7 +250,7 @@ every_possible_country = {
 			planning_skill = 4
 			logistics_skill = 3
 			skill = 3
-			visible = { 
+			visible = {
 				is_ai = no
 				has_country_flag = akyuu_is_recruit_flag
 			}
@@ -255,6 +273,24 @@ every_possible_country = {
 			}
 			ai_will_do = {
 				factor = 1
+			}
+		}
+		scientist = {
+			visible = { 
+				owner = {
+					is_ai = no
+					has_country_flag = gsk_system_is_enable_flag
+					has_country_flag = akyuu_is_recruit_flag
+				}
+			}
+			traits = {
+				scientist_trait_akyuu
+				scientist_trait_genius
+				scientist_trait_electronics_specialist
+				scientist_trait_bombs_expert
+			}
+			skills = {
+				specialization_air = 1
 			}
 		}
 	}
@@ -306,6 +342,24 @@ every_possible_country = {
 				factor = 1
 			}
 		}
+		scientist = {
+			visible = { 
+				owner = {
+					is_ai = no
+					has_country_flag = gsk_system_is_enable_flag
+					has_country_flag = keine_is_recruit_flag
+				}
+			}
+			traits = {
+				scientist_trait_keine
+				scientist_trait_brilliant_theorist
+				scientist_trait_nuclear_warfare_expert
+				scientist_trait_nuclear_power_expert
+			}
+			skills = {
+				specialization_nuclear = 2
+			}
+		}
 	}
 	generate_character = {#灵梦
 		token_base = gsk_commander_reimu
@@ -353,6 +407,24 @@ every_possible_country = {
 			}
 			ai_will_do = {
 				factor = 1
+			}
+		}
+		scientist = {
+			visible = {
+				owner = {
+					is_ai = no
+					has_country_flag = gsk_system_is_enable_flag
+					has_country_flag = reimu_is_recruit_flag
+				}
+			}
+			traits = {
+				scientist_trait_reimu
+				scientist_trait_genius
+				scientist_trait_helicopter_expert
+				scientist_trait_aircraft_specialist
+			}
+			skills = {
+				specialization_air = 1
 			}
 		}
 	}
@@ -594,6 +666,24 @@ every_possible_country = {
 				has_country_flag = kanako_is_recruit_flag
 			}
 		}
+		scientist = {
+			visible = {
+				owner = {
+					is_ai = no
+					has_country_flag = gsk_system_is_enable_flag
+					has_country_flag = kanako_is_recruit_flag
+				}
+			}
+			traits = {
+				scientist_trait_kanako
+				scientist_trait_brilliant_theorist
+				scientist_trait_armored_specialist
+				scientist_trait_artillery_specialist
+			}
+			skills = {
+				specialization_land = 4
+			}
+		}
 	}
 	generate_character = {#文文
 		token_base = gsk_commander_aya
@@ -641,6 +731,24 @@ every_possible_country = {
 			}
 			ai_will_do = {
 				factor = 1
+			}
+		}
+		scientist = {
+			visible = {
+				owner = {
+					is_ai = no
+					has_country_flag = gsk_system_is_enable_flag
+					has_country_flag = aya_is_recruit_flag
+				}
+			}
+			traits = {
+				scientist_trait_aya
+				scientist_trait_bright
+				scientist_trait_jet_expert
+				scientist_trait_rocketry_specialist
+			}
+			skills = {
+				specialization_air = 2
 			}
 		}
 	}
@@ -788,6 +896,24 @@ every_possible_country = {
 			}
 			ai_will_do = {
 				factor = 1
+			}
+		}
+		scientist = {
+			visible = { 
+				owner = {
+					is_ai = no
+					has_country_flag = gsk_system_is_enable_flag
+					has_country_flag = keine_is_recruit_flag
+				}
+			}
+			traits = {
+				scientist_trait_youmu
+				scientist_trait_gifted_engineer
+				scientist_trait_artillery_specialist
+				scientist_trait_guidance_systems_expert
+			}
+			skills = {
+				specialization_land = 2
 			}
 		}
 	}
@@ -1013,6 +1139,24 @@ every_possible_country = {
 			}
 			ai_will_do = {
 				factor = 1
+			}
+		}
+		scientist = {
+			visible = {
+				owner = {
+					is_ai = no
+					has_country_flag = gsk_system_is_enable_flag
+					has_country_flag = yagokoro_is_recruit_flag
+				}
+			}
+			traits = {
+				scientist_trait_yagokoro
+				scientist_trait_brilliant_theorist
+				scientist_trait_surface_ship_specialist
+				scientist_trait_submarine_specialist
+			}
+			skills = {
+				specialization_naval = 5
 			}
 		}
 	}
@@ -1346,6 +1490,159 @@ every_possible_country = {
 			}
 			ai_will_do = {
 				factor = 1
+			}
+		}
+	}
+	generate_character = {#莲子
+		token_base = gsk_commander_renko
+		name = renko_name
+		portraits={
+			army={
+				large= "GFX_portrait_renko"
+				small="gfx/ideas/gsk_ideas_renko.dds"
+			}
+		}
+		allowed_civil_war = {
+			is_ai = no
+		}
+		corps_commander = {
+			traits = {
+				from_gsk
+				gsk_race_human
+				renko_commander_peculiarity
+			}
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 4
+			skill = 3
+			visible = {
+				is_ai = no
+				has_country_flag = renko_is_recruit_flag
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = gsk_advisor_renko
+			ledger = army
+			desc = advisor_renko_desc
+			cost = 100
+			visible = { 
+				is_ai = no
+				has_country_flag = gsk_system_is_enable_flag
+			}
+			available = {
+				has_country_flag = renko_is_recruit_flag
+			}
+			traits = {
+				gsk_advisor_renko
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		scientist = {
+			visible = {
+				owner = {
+					is_ai = no
+					has_country_flag = gsk_system_is_enable_flag
+					has_country_flag = renko_is_recruit_flag
+				}
+			}
+			traits = {
+				scientist_trait_renko
+				scientist_trait_genius
+			}
+			skills = {
+				specialization_nuclear = 1
+			}
+		}
+	}
+	generate_character = { #梅莉
+		token_base = gsk_commander_hearn
+		name = hearn_name
+		portraits={
+			army={
+				large="gfx/leaders/gsk_leader_hearn.dds"
+				small="gfx/ideas/gsk_ideas_hearn.dds"
+			}
+		}
+		allowed_civil_war = {
+			is_ai = no
+		}
+		corps_commander = {
+			traits = {
+				from_gsk
+				gsk_race_human
+				hearn_commander_peculiarity
+			}
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 2
+			skill = 3
+			visible = { 
+				is_ai = no
+				has_country_flag = hearn_is_recruit_flag
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = gsk_advisor_hearn
+			ledger = army
+			desc = advisor_hearn_desc
+			cost = 100
+			visible = { 
+				is_ai = no
+				has_country_flag = gsk_system_is_enable_flag
+			}
+			available = {
+				has_country_flag = hearn_is_recruit_flag
+			}
+			traits = {
+				gsk_advisor_hearn
+			}
+			on_add = {
+				FROM = {
+					every_unit_leader = {
+						limit = {
+							has_trait = renko_commander_peculiarity
+						}
+						remove_unit_leader_trait = renko_commander_peculiarity
+						add_unit_leader_trait = renko_commander_peculiarity1
+					}
+				}
+				custom_effect_tooltip = gsk_advisor_hearn_tt
+			}
+			on_remove = {
+				FROM = {
+					every_unit_leader = {
+						limit = {
+							has_trait = renko_commander_peculiarity1
+						}
+						remove_unit_leader_trait = renko_commander_peculiarity1
+						add_unit_leader_trait = renko_commander_peculiarity
+					}
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		scientist = {
+			visible = {
+				owner = {
+					is_ai = no
+					has_country_flag = gsk_system_is_enable_flag
+					has_country_flag = hearn_is_recruit_flag
+				}
+			}
+			traits = {
+				scientist_trait_hearn
+				scientist_trait_genius
+			}
+			skills = {
+				specialization_land = 1
 			}
 		}
 	}

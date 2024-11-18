@@ -1,4 +1,4 @@
-version="1.20"
+version="2.020"
 tags={
 	"Gameplay"
 	"Events"
@@ -8,5 +8,5 @@ dependencies={
 	"3350890356"
 }
 name="TouHou Mod:Gensokyo Character"
-supported_version="1.14.*"
+supported_version="1.15.*"
 remote_file_id="3262070627"

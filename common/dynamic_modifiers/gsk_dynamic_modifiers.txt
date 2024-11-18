@@ -1,0 +1,7 @@
+gsk_dym_add_contact = {
+	civilian_factory_use = 3
+	political_power_gain = -0.5
+}
+gsk_dym_add_fumo = {
+	civilian_factory_use = 10
+}

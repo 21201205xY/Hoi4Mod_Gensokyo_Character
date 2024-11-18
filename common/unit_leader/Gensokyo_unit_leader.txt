@@ -343,7 +343,6 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-			
 			recon_factor = 1
 			wounded_chance_factor = -10
 			sickness_chance = -10
@@ -352,13 +351,19 @@ leader_traits = {
 			factor = 0
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 	}
 	gsk_houraisan_med0 = {
-		type = all
-		trait_type = personality_trait
-		modifier = {
+		type = corps_commander
+		gain_xp = {
+			always = no
+		}
+		cost = 0
+		trait_type = assignable_trait
+		gui_row = 17
+		gui_column = 0
+		non_shared_modifier = {
 			reassignment_duration_factor = -0.5
 		}
 		field_marshal_modifier = {
@@ -370,14 +375,44 @@ leader_traits = {
 		new_commander_weight = {
 			factor = 0
 		}
+		prerequisites = {
+			has_trait = from_gsk
+			NOT = {
+				has_trait = gsk_houraisan_med1
+				has_trait = gsk_houraisan_med2
+			}
+			FROM = {
+				has_equipment = {
+					gsk_equipment_houraisan_med0 > 0
+				}
+			}
+		}
+		on_add = {
+			add_max_trait = 3
+			FROM = {
+				add_command_power = 15
+				add_equipment_to_stockpile = {
+					type = gsk_equipment_houraisan_med0
+					amount = -1
+					producer = root
+				}
+			}
+		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 	}
 	gsk_houraisan_med1 = {
-		type = all
-		trait_type = personality_trait
-		modifier = {
+		type = corps_commander
+		gain_xp = {
+			always = no
+		}
+		cost = 0
+		trait_type = assignable_trait
+		gui_row = 17
+		gui_column = 1
+		#any_parent = { gsk_houraisan_med0 }
+		non_shared_modifier = {
 			reassignment_duration_factor = -0.7
 		}
 		field_marshal_modifier = {
@@ -389,14 +424,44 @@ leader_traits = {
 		new_commander_weight = {
 			factor = 0
 		}
+		prerequisites = {
+			has_trait = from_gsk
+			has_trait = gsk_houraisan_med0
+			NOT = {
+				has_trait = gsk_houraisan_med2
+			}
+			FROM = {
+				has_equipment = {
+					gsk_equipment_houraisan_med0 > 0
+				}
+			}
+		}
+		on_add = {
+			remove_unit_leader_trait = gsk_houraisan_med0
+			FROM = {
+				add_command_power = 15
+				add_equipment_to_stockpile = {
+					type = gsk_equipment_houraisan_med0
+					amount = -1
+					producer = root
+				}
+			}
+		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 	}
 	gsk_houraisan_med2 = {
-		type = all
-		trait_type = personality_trait
-		modifier = {
+		type = corps_commander
+		gain_xp = {
+			always = no
+		}
+		cost = 0
+		trait_type = assignable_trait
+		gui_row = 17
+		gui_column = 2
+		#any_parent = { gsk_houraisan_med1 }
+		non_shared_modifier = {
 			reassignment_duration_factor = -0.9
 		}
 		field_marshal_modifier = {
@@ -408,8 +473,27 @@ leader_traits = {
 		new_commander_weight = {
 			factor = 0
 		}
+		prerequisites = {
+			has_trait = gsk_houraisan_med1
+			FROM = {
+				has_equipment = {
+					gsk_equipment_houraisan_med0 > 0
+				}
+			}
+		}
+		on_add = {
+			remove_unit_leader_trait = gsk_houraisan_med1
+			FROM = {
+				add_command_power = 15
+				add_equipment_to_stockpile = {
+					type = gsk_equipment_houraisan_med0
+					amount = -1
+					producer = root
+				}
+			}
+		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 	}
 	remilia_commander_peculiarity = {
@@ -550,7 +634,6 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			air_superiority_bonus_in_combat = 0.5
 			org_loss_when_moving = -0.2
 			extra_paratrooper_supply_grace = 96
@@ -568,11 +651,9 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			army_artillery_attack_factor = 0.3
 			supply_consumption_factor = 0.05
 			equipment_capture = 0.06
-			
 		}
 		non_shared_modifier = {
 		}
@@ -587,11 +668,9 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			sortie_efficiency = 0.25
 			positioning = 0.25
 			carrier_night_traffic = 0.3
-			
 		}
 		non_shared_modifier = {
 		}
@@ -606,11 +685,9 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			attrition = -0.3
 			supply_factor = 0.2
 			org_loss_when_moving = -0.2
-			
 		}
 		non_shared_modifier = {
 		}
@@ -625,11 +702,9 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			army_armor_attack_factor = 0.25
 			army_armor_defence_factor = 0.25
 			army_armor_speed_factor = 0.25
-			
 		}
 		non_shared_modifier = {
 		}
@@ -644,10 +719,8 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			mechanized_attack_factor = 0.15
 			mechanized_defence_factor = 0.15
-			
 		}
 		non_shared_modifier = {
 		}
@@ -662,9 +735,7 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			terrain_penalty_reduction = 0.3
-			
 		}
 		non_shared_modifier = {
 		}
@@ -679,7 +750,6 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			terrain_penalty_reduction = 0.3
 			river_crossing_factor = -0.3
 			hills = {
@@ -721,11 +791,9 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			dig_in_speed = 5
 			max_dig_in = 5
 			max_dig_in_factor = 0.15
-			
 		}
 		non_shared_modifier = {
 		}
@@ -740,7 +808,6 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			special_forces_attack_factor = 0.25
 			special_forces_defence_factor = 0.25
 			special_forces_out_of_supply_factor = -0.3
@@ -785,11 +852,27 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			initiative_factor = 0.15
 			coordination_bonus = 0.25
 			recon_factor_while_entrenched = 10
-			
+		}
+		non_shared_modifier = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	satori_spy_peculiarity = {
+		type = all
+		trait_type = personality_trait
+		non_shared_modifier = {
+			own_operative_capture_chance_factor = -3
+			own_operative_harmed_time_factor = -3
+			enemy_operative_detection_chance = 100
+			own_operative_detection_chance = -100
 		}
 		non_shared_modifier = {
 		}
@@ -804,11 +887,26 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			recon_factor = -10
 			combat_width_factor = -0.2
 			cas_damage_reduction = 0.5
-			
+		}
+		non_shared_modifier = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	koishi_spy_peculiarity = {
+		type = all
+		trait_type = personality_trait
+		non_shared_modifier = {
+			own_operative_capture_chance_factor = -3
+			own_operative_detection_chance = -100
+			own_operative_harmed_time_factor = -3
 		}
 		non_shared_modifier = {
 		}
@@ -823,11 +921,9 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			army_infantry_attack_factor = 0.25
 			army_infantry_defence_factor = 0.25
 			org_loss_when_moving = -0.15
-			
 		}
 		non_shared_modifier = {
 		}
@@ -842,9 +938,7 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			no_supply_grace = -12
-			
 		}
 		non_shared_modifier = {
 		}
@@ -859,11 +953,9 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			offence = 0.05
 			no_supply_grace = -6
 			army_strength_factor = 0.15
-			
 		}
 		non_shared_modifier = {
 		}
@@ -878,11 +970,9 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			offence = 0.15
 			no_supply_grace = -3
 			army_strength_factor = 0.25
-			
 		}
 		non_shared_modifier = {
 		}
@@ -897,7 +987,6 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			offence = 0.15
 			army_strength_factor = 0.25
 			desert = {
@@ -945,7 +1034,6 @@ leader_traits = {
 				attack = 0.05
 				movement = 0.05
 			}
-			
 		}
 		non_shared_modifier = {
 		}
@@ -960,9 +1048,7 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			no_supply_grace = -12
-			
 		}
 		non_shared_modifier = {
 		}
@@ -977,11 +1063,9 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			army_org_regain = 0.15
 			org_loss_at_low_org_factor = -0.5
 			pocket_penalty = -1
-
 		}
 		non_shared_modifier = {
 		}
@@ -996,12 +1080,10 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			navy_submarine_attack_factor = 0.3
 			naval_torpedo_hit_chance_factor = 0.25
 			navy_visibility = -0.2
 			sub_retreat_speed = 0.25
-
 		}
 		non_shared_modifier = {
 		}
@@ -1016,13 +1098,11 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			navy_capital_ship_attack_factor = 0.3
 			navy_capital_ship_defence_factor = 0.3
 			naval_has_potf_in_combat_attack = 0.15
 			naval_has_potf_in_combat_defense = 0.15
 			naval_retreat_chance = -0.15
-			
 		}
 		non_shared_modifier = {
 		}
@@ -1037,7 +1117,6 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			army_strength_factor = 0.15
 			planning_speed = 0.25
 			max_planning_factor = 0.2
@@ -1056,11 +1135,9 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			invasion_preparation = -0.6
 			naval_invasion_penalty = -0.6
 			heat_attrition = -0.5
-
 		}
 		non_shared_modifier = {
 		}
@@ -1075,11 +1152,9 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			convoy_raiding_efficiency_factor = 0.3
 			convoy_retreat_speed = 0.15
 			navy_max_range_factor = 0.25
-
 		}
 		non_shared_modifier = {
 		}
@@ -1094,11 +1169,9 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			navy_org_factor = 0.15
 			naval_morale_factor = 0.3
 			convoy_escort_efficiency = 0.3
-
 		}
 		non_shared_modifier = {
 		}
@@ -1113,11 +1186,9 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			army_core_attack_factor = 0.2
 			army_attack_factor = 0.1
 			army_org_regain = 0.3
-
 		}
 		non_shared_modifier = {
 		}
@@ -1132,12 +1203,10 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			cas_damage_reduction = 0.3
 			fortification_damage = 1.5
 			fortification_collateral_chance = 1.5
 			paradrop_organization_factor = 0.3
-
 		}
 		non_shared_modifier = {
 		}
@@ -1152,12 +1221,10 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			planning_speed = 0.15
 			max_planning = 0.15
 			max_planning_factor = 0.12
 			army_morale_factor = 0.1
-
 		}
 		non_shared_modifier = {
 		}
@@ -1172,11 +1239,9 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			experience_loss_factor = -0.5
 			org_loss_at_low_org_factor = -0.3
 			army_strength_factor = 0.25
-
 		}
 		non_shared_modifier = {
 		}
@@ -1191,11 +1256,9 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-
 			max_planning = 0.15
 			army_org_regain = 0.25
 			planning_speed = 0.2
-
 		}
 		non_shared_modifier = {
 		}
@@ -1211,6 +1274,57 @@ leader_traits = {
 		trait_type = personality_trait
 		modifier = {
 			experience_gain_factor = 3
+		}
+		non_shared_modifier = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	renko_commander_peculiarity = {
+		type = all
+		trait_type = personality_trait
+		modifier = {
+			army_attack_against_major_factor = 0.2
+			army_breakthrough_against_major_factor = 0.2
+			army_defence_against_major_factor = 0.2
+		}
+		non_shared_modifier = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	renko_commander_peculiarity1 = {
+		type = all
+		trait_type = personality_trait
+		modifier = {
+			army_attack_against_major_factor = 0.4
+			army_breakthrough_against_major_factor = 0.4
+			army_defence_against_major_factor = 0.4
+		}
+		non_shared_modifier = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	hearn_commander_peculiarity = {
+		type = all
+		trait_type = personality_trait
+		modifier = {
+			army_attack_against_minor_factor = 0.2
+			army_breakthrough_against_minor_factor = 0.2
+			army_defence_against_minor_factor = 0.2
 		}
 		non_shared_modifier = {
 		}

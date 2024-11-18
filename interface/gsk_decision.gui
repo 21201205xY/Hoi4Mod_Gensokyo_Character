@@ -22,15 +22,6 @@ guiTypes = {
 			text = gsk_decision_description_t
 			maxWidth = 460
 		}
-		#checkboxType = {
-		#	name = "gsk_decision_checkbox"
-		#	position = {
-		#		x = 20
-		#		y = 10
-		#	}
-		#	buttonFont = "hoi_18mbs" 
-		#	buttonText = "隐藏任务完成提示事件"
-		#}
 		buttonType = {
 			name ="gsk_help_button"
 			position = { x= 15	y= 200 }
@@ -46,6 +37,14 @@ guiTypes = {
 			text = gsk_show_mio_button.tt
 			spriteType = "GFX_btn_blue"
 			clicksound = click_default
-		}	
+		}			
+		buttonType = { #政治面板按钮
+			name = "gsk_change_secretary_button"
+			position = { x = 300 y = 130 }
+			quadTextureSprite = "GFX_focus_generic_improve_the_administration"
+			scale = 1.2
+			buttonFont = "hoi_24header"
+			pdx_tooltip = gsk_change_secretary_tt
+		}
 	}
 }

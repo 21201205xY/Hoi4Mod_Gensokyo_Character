@@ -55,9 +55,86 @@ gsk_recruit_character_interaction = {
 	# 	remove_effect = {
 	# 	}
 	# }
-	embodiment_of_Scarlet_Devil_quest1 = {
+	gsk_begin_add_fumo = {
+		priority = 500
+		allowed = {
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 10
+		}
+		visible = {
+			is_ai = no
+			has_country_flag = gsk_system_is_enable_flag
+			has_country_flag = allow_creat_fumo_flag
+			NOT = {
+				has_country_flag = gsk_begin_add_fumo_flag
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			set_country_flag = gsk_begin_add_fumo_flag
+			add_dynamic_modifier = {
+				modifier = gsk_dym_add_fumo
+			}
+		}
+		remove_effect = {
+		}
+	}
+	gsk_add_fumo_mission = {
+		priority = 501
+		activation = {
+			is_ai = no
+			has_country_flag = gsk_begin_add_fumo_flag
+		}
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+			NOT = {
+				has_country_flag = gsk_begin_add_fumo_flag
+			}
+		}
+		#icon = mission_icon     # For GFX_decision_mission_icon
+		is_good = yes
+		days_mission_timeout = 100
+		selectable_mission = no
+		complete_effect = {
+
+		}
+		timeout_effect = {
+			custom_effect_tooltip = gsk_add_fumo_mission_tt
+			add_to_variable = {
+				value = 1
+				var = gsk_var_number_of_fumo
+			}
+			activate_mission = gsk_add_fumo_mission
+		}
+	}
+	gsk_end_add_fumo = {
+		priority = 499
+		allowed = {
+		}
+		available = {
+		}
+		visible = {
+			is_ai = no
+			has_country_flag = gsk_system_is_enable_flag
+			has_country_flag = gsk_begin_add_fumo_flag
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			remove_dynamic_modifier = {
+				modifier = gsk_dym_add_fumo
+			}
+			clr_country_flag = gsk_begin_add_fumo_flag
+		}
+		remove_effect = {
+		}
+	}
+	embodiment_of_Scarlet_Devil_quest1 = { #红魔馆任务:芙兰想要玩耍！
 		priority = 300
-		#红魔馆任务:芙兰想要玩耍！
 		allowed = {
 		}
 		available = {
@@ -83,8 +160,7 @@ gsk_recruit_character_interaction = {
 		remove_effect = {
 		}
 	}
-	embodiment_of_Scarlet_Devil_quest2 = {
-		#红魔馆任务:冈格尼尔之枪的对手！
+	embodiment_of_Scarlet_Devil_quest2 = { #红魔馆任务:冈格尼尔之枪的对手！
 		priority = 299
 		allowed = {
 		}
@@ -112,8 +188,7 @@ gsk_recruit_character_interaction = {
 		remove_effect = {
 		}
 	}
-	embodiment_of_Scarlet_Devil_quest3 = {
-		#红魔馆任务:成为世界之主的第一步！
+	embodiment_of_Scarlet_Devil_quest3 = { #红魔馆任务:成为世界之主的第一步！
 		priority = 298
 		allowed = {
 		}
@@ -141,8 +216,7 @@ gsk_recruit_character_interaction = {
 		remove_effect = {
 		}
 	}
-	human_village_quest0 = {
-		#人间之里任务:我们将书写历史！
+	human_village_quest0 = { #人间之里任务:我们将书写历史！
 		priority = 297
 		allowed = {
 		}
@@ -171,7 +245,7 @@ gsk_recruit_character_interaction = {
 		remove_effect = {
 		}
 	}
-	human_village_quest1 = {#人间之里任务:本居小铃的拯救阿求作战！
+	human_village_quest1 = { #人间之里任务:本居小铃的拯救阿求作战！
 		priority = 297
 		allowed = {
 		}
@@ -203,7 +277,8 @@ gsk_recruit_character_interaction = {
 		remove_effect = {
 		}
 	}
-	moriya_shrine_quest0 = {#早苗
+	moriya_shrine_quest0 = {
+		#早苗
 		priority = 296
 		allowed = {
 		}
@@ -443,7 +518,6 @@ gsk_recruit_character_interaction = {
 		}
 		available = {
 			has_country_flag = yagokoro_is_recruit_flag
-			#num_of_available_civilian_factories > 5
 			num_of_civilian_factories_available_for_projects > 5
 		}
 		visible = {
@@ -463,7 +537,9 @@ gsk_recruit_character_interaction = {
 		complete_effect = {
 		}
 		remove_effect = {
-			set_technology = { gsk_equipment_houraisan_med_tech = 1 }
+			set_technology = {
+				gsk_equipment_houraisan_med_tech = 1
+			}
 		}
 	}
 	eientei_quest2 = {
@@ -478,7 +554,9 @@ gsk_recruit_character_interaction = {
 		visible = {
 			has_country_flag = gsk_system_is_enable_flag
 			has_country_flag = yagokoro_is_recruit_flag
-			not = { has_country_flag = expand_role_list_flag }
+			not = {
+				has_country_flag = expand_role_list_flag
+			}
 		}
 		fire_only_once = no
 		cost = 0
@@ -526,7 +604,9 @@ gsk_recruit_character_interaction = {
 		available = {
 			has_country_flag = kaguya_is_recruit_flag
 			num_of_civilian_factories_available_for_projects > 15
-			not = { has_country_flag = eientei_exhibition_just_open_flag }
+			not = {
+				has_country_flag = eientei_exhibition_just_open_flag
+			}
 		}
 		visible = {
 			has_country_flag = gsk_system_is_enable_flag
@@ -552,9 +632,9 @@ gsk_recruit_character_interaction = {
 		}
 		remove_effect = {
 			mio:gsk_kourindou_design_bureau = {
-				add_mio_funds = 20000 
+				add_mio_funds = 20000
 			}
-			mio:gsk_hakurei_design_bureau ={
+			mio:gsk_hakurei_design_bureau = {
 				add_mio_funds = 20000
 			}
 			mio:gsk_kapa_design_bureau = {
@@ -563,7 +643,7 @@ gsk_recruit_character_interaction = {
 			mio:gsk_kogasa_design_bureau = {
 				add_mio_funds = 20000
 			}
-			mio:gsk_youmu_design_bureau ={
+			mio:gsk_youmu_design_bureau = {
 				add_mio_funds = 20000
 			}
 			mio:gsk_kaguya_design_bureau = {
@@ -578,12 +658,13 @@ gsk_recruit_character_interaction = {
 		available = {
 			has_country_flag = kaguya_is_recruit_flag
 			num_of_civilian_factories_available_for_projects > 10
-			not = { has_country_flag = eientei_exhibition_just_open_flag }
+			not = {
+				has_country_flag = eientei_exhibition_just_open_flag
+			}
 		}
 		visible = {
 			has_country_flag = gsk_system_is_enable_flag
 			has_country_flag = kaguya_is_recruit_flag
-			has_dlc = "Arms Against Tyranny"
 			AND = {
 				num_of_factories > 150
 				num_of_factories < 300
@@ -607,18 +688,18 @@ gsk_recruit_character_interaction = {
 		}
 		remove_effect = {
 			mio:gsk_kourindou_design_bureau = {
-				add_mio_funds = 10000 
+				add_mio_funds = 10000
 			}
-			mio:gsk_hakurei_design_bureau ={
+			mio:gsk_hakurei_design_bureau = {
 				add_mio_funds = 10000
 			}
 			mio:gsk_kapa_design_bureau = {
 				add_mio_funds = 10000
 			}
 			mio:gsk_kogasa_design_bureau = {
-				add_mio_funds = 10000 
+				add_mio_funds = 10000
 			}
-			mio:gsk_youmu_design_bureau ={
+			mio:gsk_youmu_design_bureau = {
 				add_mio_funds = 10000
 			}
 			mio:gsk_kaguya_design_bureau = {
@@ -633,7 +714,9 @@ gsk_recruit_character_interaction = {
 		available = {
 			has_country_flag = kaguya_is_recruit_flag
 			num_of_civilian_factories_available_for_projects > 5
-			not = { has_country_flag = eientei_exhibition_just_open_flag }
+			not = {
+				has_country_flag = eientei_exhibition_just_open_flag
+			}
 		}
 		visible = {
 			has_country_flag = gsk_system_is_enable_flag
@@ -659,18 +742,18 @@ gsk_recruit_character_interaction = {
 		}
 		remove_effect = {
 			mio:gsk_kourindou_design_bureau = {
-				add_mio_funds = 5000 
+				add_mio_funds = 5000
 			}
-			mio:gsk_hakurei_design_bureau ={
+			mio:gsk_hakurei_design_bureau = {
 				add_mio_funds = 5000
 			}
 			mio:gsk_kapa_design_bureau = {
 				add_mio_funds = 5000
 			}
 			mio:gsk_kogasa_design_bureau = {
-				add_mio_funds = 5000 
+				add_mio_funds = 5000
 			}
-			mio:gsk_youmu_design_bureau ={
+			mio:gsk_youmu_design_bureau = {
 				add_mio_funds = 5000
 			}
 			mio:gsk_kaguya_design_bureau = {
@@ -678,6 +761,9 @@ gsk_recruit_character_interaction = {
 			}
 		}
 	}
+#################################################################################################
+########                        所有蓬莱提神药特质增加放在了角色特质里                      ########
+#################################################################################################
 	gsk_role_list_use_all0 = {
 		priority = 80
 		allowed = {
@@ -688,9 +774,15 @@ gsk_recruit_character_interaction = {
 			}
 			any_unit_leader = {
 				has_trait = from_gsk
-				not = { has_trait = gsk_houraisan_med0 }
-				not = { has_trait = gsk_houraisan_med1 }
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med0
+				}
+				not = {
+					has_trait = gsk_houraisan_med1
+				}
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		visible = {
@@ -707,20 +799,25 @@ gsk_recruit_character_interaction = {
 		}
 		complete_effect = {
 			while_loop_effect = {
-				limit = { 
+				limit = {
 					AND = {
 						any_unit_leader = {
 							has_trait = from_gsk
-							not = { has_trait = gsk_houraisan_med0 }
-							not = { has_trait = gsk_houraisan_med1 }
-							not = { has_trait = gsk_houraisan_med2 }
+							not = {
+								has_trait = gsk_houraisan_med0
+							}
+							not = {
+								has_trait = gsk_houraisan_med1
+							}
+							not = {
+								has_trait = gsk_houraisan_med2
+							}
 						}
 						has_equipment = {
 							gsk_equipment_houraisan_med0 > 0
 						}
 					}
 				}
-
 				add_equipment_to_stockpile = {
 					type = gsk_equipment_houraisan_med0
 					amount = -1
@@ -729,9 +826,15 @@ gsk_recruit_character_interaction = {
 				random_unit_leader = {
 					limit = {
 						has_trait = from_gsk
-						not = { has_trait = gsk_houraisan_med0 }
-						not = { has_trait = gsk_houraisan_med1 }
-						not = { has_trait = gsk_houraisan_med2 }
+						not = {
+							has_trait = gsk_houraisan_med0
+						}
+						not = {
+							has_trait = gsk_houraisan_med1
+						}
+						not = {
+							has_trait = gsk_houraisan_med2
+						}
 					}
 					gsk_increase_houraisan_med = yes
 				}
@@ -752,7 +855,9 @@ gsk_recruit_character_interaction = {
 			any_unit_leader = {
 				has_trait = from_gsk
 				has_trait = gsk_houraisan_med0
-				not = { has_trait = gsk_houraisan_med1 }
+				not = {
+					has_trait = gsk_houraisan_med1
+				}
 			}
 		}
 		visible = {
@@ -769,19 +874,20 @@ gsk_recruit_character_interaction = {
 		}
 		complete_effect = {
 			while_loop_effect = {
-				limit = { 
+				limit = {
 					AND = {
 						any_unit_leader = {
 							has_trait = from_gsk
 							has_trait = gsk_houraisan_med0
-							not = { has_trait = gsk_houraisan_med1 }
+							not = {
+								has_trait = gsk_houraisan_med1
+							}
 						}
 						has_equipment = {
 							gsk_equipment_houraisan_med0 > 0
 						}
 					}
 				}
-
 				add_equipment_to_stockpile = {
 					type = gsk_equipment_houraisan_med0
 					amount = -1
@@ -791,7 +897,9 @@ gsk_recruit_character_interaction = {
 					limit = {
 						has_trait = from_gsk
 						has_trait = gsk_houraisan_med0
-						not = { has_trait = gsk_houraisan_med1 }
+						not = {
+							has_trait = gsk_houraisan_med1
+						}
 					}
 					gsk_increase_houraisan_med = yes
 				}
@@ -812,7 +920,9 @@ gsk_recruit_character_interaction = {
 			any_unit_leader = {
 				has_trait = from_gsk
 				has_trait = gsk_houraisan_med1
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		visible = {
@@ -829,19 +939,20 @@ gsk_recruit_character_interaction = {
 		}
 		complete_effect = {
 			while_loop_effect = {
-				limit = { 
+				limit = {
 					AND = {
 						any_unit_leader = {
 							has_trait = from_gsk
 							has_trait = gsk_houraisan_med1
-							not = { has_trait = gsk_houraisan_med2 }
+							not = {
+								has_trait = gsk_houraisan_med2
+							}
 						}
 						has_equipment = {
 							gsk_equipment_houraisan_med0 > 0
 						}
 					}
 				}
-
 				add_equipment_to_stockpile = {
 					type = gsk_equipment_houraisan_med0
 					amount = -1
@@ -851,7 +962,9 @@ gsk_recruit_character_interaction = {
 					limit = {
 						has_trait = from_gsk
 						has_trait = gsk_houraisan_med1
-						not = { has_trait = gsk_houraisan_med2 }
+						not = {
+							has_trait = gsk_houraisan_med2
+						}
 					}
 					gsk_increase_houraisan_med = yes
 				}
@@ -875,7 +988,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = remilia_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -917,7 +1032,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = sakuya_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -959,7 +1076,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = flandre_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1001,7 +1120,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = patchouli_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1043,7 +1164,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = cirno_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1085,7 +1208,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = akyuu_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1127,7 +1252,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = keine_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1169,7 +1296,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = reimu_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1211,7 +1340,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = marisa_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1254,7 +1385,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = sanae_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1300,7 +1433,9 @@ gsk_recruit_character_interaction = {
 					has_trait = sanae_commander_peculiarity0
 					has_trait = sanae_commander_peculiarity1
 				}
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1346,7 +1481,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = suwako_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1388,7 +1525,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = kanako_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1430,7 +1569,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = aya_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1472,7 +1613,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = satori_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1514,7 +1657,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = koishi_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1556,7 +1701,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = youmu_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1603,7 +1750,9 @@ gsk_recruit_character_interaction = {
 					has_trait = yuyuko_commander_peculiarity2
 					has_trait = yuyuko_commander_peculiarity3
 				}
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1650,7 +1799,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = reisen_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1692,7 +1843,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = yagokoro_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1734,7 +1887,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = mokou_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1776,7 +1931,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = tenshi_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1818,7 +1975,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = shikieiki_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1860,7 +2019,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = yukari_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1902,7 +2063,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = kosuzu_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1944,7 +2107,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = yuka_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -1986,7 +2151,9 @@ gsk_recruit_character_interaction = {
 			has_country_flag = expand_role_list_flag
 			any_unit_leader = {
 				has_trait = gsk_alice_commander_peculiarity
-				not = { has_trait = gsk_houraisan_med2 }
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
 			}
 		}
 		fire_only_once = no
@@ -2006,6 +2173,94 @@ gsk_recruit_character_interaction = {
 			every_unit_leader = {
 				limit = {
 					has_trait = gsk_alice_commander_peculiarity
+				}
+				gsk_increase_houraisan_med = yes
+			}
+			custom_effect_tooltip = eientei_quest2.tt
+		}
+		remove_effect = {
+		}
+	}
+	gsk_role_list_use27 = {
+		priority = 51
+		allowed = {
+		}
+		available = {
+			has_equipment = {
+				gsk_equipment_houraisan_med0 > 0
+			}
+		}
+		visible = {
+			has_country_flag = gsk_system_is_enable_flag
+			has_country_flag = expand_role_list_flag
+			any_unit_leader = {
+				has_trait = renko_commander_peculiarity1
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		days_remove = 0
+		modifier = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = gsk_equipment_houraisan_med0
+				amount = -1
+				producer = root
+			}
+			every_unit_leader = {
+				limit = {
+					has_trait = renko_commander_peculiarity1
+				}
+				gsk_increase_houraisan_med = yes
+			}
+			custom_effect_tooltip = eientei_quest2.tt
+		}
+		remove_effect = {
+		}
+	}
+	gsk_role_list_use28 = {
+		priority = 50
+		allowed = {
+		}
+		available = {
+			has_equipment = {
+				gsk_equipment_houraisan_med0 > 0
+			}
+		}
+		visible = {
+			has_country_flag = gsk_system_is_enable_flag
+			has_country_flag = expand_role_list_flag
+			any_unit_leader = {
+				has_trait = hearn_commander_peculiarity
+				not = {
+					has_trait = gsk_houraisan_med2
+				}
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		days_remove = 0
+		modifier = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = gsk_equipment_houraisan_med0
+				amount = -1
+				producer = root
+			}
+			every_unit_leader = {
+				limit = {
+					has_trait = hearn_commander_peculiarity
 				}
 				gsk_increase_houraisan_med = yes
 			}

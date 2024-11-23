@@ -10,6 +10,7 @@ ideas = {
 			modifier = {
 				resistance_target = -0.1
 				subversive_activites_upkeep = -0.1
+				resource_trade_cost_bonus_per_factory = 1
 			}
 		}
 		gsk_embodiment_idea1 = {
@@ -22,6 +23,7 @@ ideas = {
 			modifier = {
 				resistance_target = -0.2
 				subversive_activites_upkeep = -0.3
+				resource_trade_cost_bonus_per_factory = 2
 			}
 		}
 		gsk_embodiment_idea2 = {
@@ -35,7 +37,7 @@ ideas = {
 				resistance_target = -0.3
 				subversive_activites_upkeep = -0.5
 				intelligence_agency_defense = 1
-				offence = 0.05
+				resource_trade_cost_bonus_per_factory = 2
 			}
 		}
 		gsk_sakuya_fix_idea0 = {
@@ -135,7 +137,9 @@ ideas = {
 				is_ai = yes
 			}
 			modifier = {
-				overlord_trade_cost_factor = -0.1
+				#overlord_trade_cost_factor = -0.1
+				cic_to_overlord_factor = 0.05
+				mic_to_overlord_factor = 0.05
 			}
 		}
 		gsk_embodiment_idea_sub1 = {
@@ -146,9 +150,9 @@ ideas = {
 				is_ai = yes
 			}
 			modifier = {
-				overlord_trade_cost_factor = -0.15
-				cic_to_overlord_factor = 0.1
-				mic_to_overlord_factor = 0.1
+				#overlord_trade_cost_factor = -0.15
+				cic_to_overlord_factor = 0.15
+				mic_to_overlord_factor = 0.15
 			}
 		}
 		gsk_embodiment_idea_sub2 = {
@@ -159,9 +163,9 @@ ideas = {
 				is_ai = yes
 			}
 			modifier = {
-				overlord_trade_cost_factor = -0.2
-				cic_to_overlord_factor = 0.2
-				mic_to_overlord_factor = 0.2
+				#overlord_trade_cost_factor = -0.2
+				cic_to_overlord_factor = 0.25
+				mic_to_overlord_factor = 0.25
 			}
 		}
 		gsk_kaguya_design_bureau_idae0 = {

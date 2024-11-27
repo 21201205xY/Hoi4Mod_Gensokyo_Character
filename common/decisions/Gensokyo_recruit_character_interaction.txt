@@ -311,11 +311,10 @@ gsk_recruit_character_interaction = {
 		allowed = {
 		}
 		available = {
-			has_tech = nuclear_reactors1
-			# has_built = {
-			# 	type = arms_factory
-			# 	value > 1
-			# }
+			is_special_project_completed = sp:sp_nuclear_reactor
+			any_owned_state = {
+				nuclear_reactor > 0
+			}
 		}
 		visible = {
 			has_country_flag = gsk_system_is_enable_flag

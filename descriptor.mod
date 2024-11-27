@@ -7,6 +7,6 @@ dependencies={
 	"The Fire Rises"
 	"3350890356"
 }
-name="TouHou Mod:Gensokyo Character"
+name="TouHou Mod:Gensokyo Character(TFR)"
 supported_version="1.15.*"
-remote_file_id="3262070627"
+remote_file_id="3354443188"

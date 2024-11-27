@@ -311,7 +311,6 @@ gsk_recruit_character_interaction = {
 		allowed = {
 		}
 		available = {
-			is_special_project_completed = sp:sp_nuclear_reactor
 			any_owned_state = {
 				nuclear_reactor > 0
 			}
@@ -610,7 +609,6 @@ gsk_recruit_character_interaction = {
 		visible = {
 			has_country_flag = gsk_system_is_enable_flag
 			has_country_flag = kaguya_is_recruit_flag
-			has_dlc = "Arms Against Tyranny"
 			num_of_factories > 300
 		}
 		fire_only_once = no
@@ -720,7 +718,6 @@ gsk_recruit_character_interaction = {
 		visible = {
 			has_country_flag = gsk_system_is_enable_flag
 			has_country_flag = kaguya_is_recruit_flag
-			has_dlc = "Arms Against Tyranny"
 			num_of_factories < 150
 		}
 		fire_only_once = no

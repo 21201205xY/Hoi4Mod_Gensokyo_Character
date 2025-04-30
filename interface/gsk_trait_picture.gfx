@@ -375,4 +375,36 @@ spriteTypes = {
 		name = "GFX_scientist_trait_hearn"
 		texturefile = "gfx/traits/hearn_commander_peculiarity_traits.png"
 	}
+	spriteType = {
+		name = "GFX_trait_sagume_commander_peculiarity"
+		texturefile = "gfx/traits/sagume_commander_peculiarity_traits.png"
+	}
+	spriteType = {
+		name = "GFX_scientist_trait_sagume"
+		texturefile = "gfx/traits/sagume_commander_peculiarity_traits.png"
+	}
+	spriteType = {
+		name = "GFX_trait_seiran_commander_peculiarity"
+		texturefile = "gfx/traits/seiran_commander_peculiarity_traits.png"
+	}
+	spriteType = {
+		name = "GFX_trait_ringo_commander_peculiarity"
+		texturefile = "gfx/traits/ringo_commander_peculiarity_traits.png"
+	}
+	spriteType = {
+		name = "GFX_trait_doremy_commander_peculiarity"
+		texturefile = "gfx/traits/doremy_commander_peculiarity_traits.png"
+	}
+	spriteType = {
+		name = "GFX_trait_clownpiece_commander_peculiarity"
+		texturefile = "gfx/traits/clownpiece_commander_peculiarity_traits.png"
+	}
+	spriteType = {
+		name = "GFX_trait_junko_commander_peculiarity"
+		texturefile = "gfx/traits/junko_commander_peculiarity_traits.png"
+	}
+	spriteType = {
+		name = "GFX_trait_hecatia_commander_peculiarity"
+		texturefile = "gfx/traits/hecatia_commander_peculiarity_traits.png"
+	}
 }

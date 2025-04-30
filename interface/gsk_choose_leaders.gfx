@@ -51,4 +51,8 @@ spriteTypes = {
 		name = "GFX_background_eientei"
 		texturefile = "gfx/gui/gsk_choose_leaders/background_eientei.dds"
 	}
+	SpriteType = {
+		name = "GFX_background_kanjuden"
+		texturefile = "gfx/gui/gsk_choose_leaders/background_kanjuden.dds"
+	}
 }

@@ -127,4 +127,32 @@ spriteTypes = {
 		name = "GFX_portrait_hearn"
 		texturefile = "gfx/leaders/gsk_leader_hearn.dds"
 	}
+	SpriteType = {
+		name = "GFX_portrait_seiran"
+		texturefile = "gfx/leaders/gsk_leader_seiran.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_ringo"
+		texturefile = "gfx/leaders/gsk_leader_ringo.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_doremy"
+		texturefile = "gfx/leaders/gsk_leader_doremy.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_sagume"
+		texturefile = "gfx/leaders/gsk_leader_sagume.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_clownpiece"
+		texturefile = "gfx/leaders/gsk_leader_clownpiece.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_junko"
+		texturefile = "gfx/leaders/gsk_leader_junko.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_hecatia"
+		texturefile = "gfx/leaders/gsk_leader_hecatia.dds"
+	}
 }

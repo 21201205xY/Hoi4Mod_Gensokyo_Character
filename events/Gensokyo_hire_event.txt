@@ -491,3 +491,43 @@ country_event = {#辉夜
 		}
 	}
 }
+country_event = {#纯狐
+	id = gsk_hire_event.121
+	title = gsk_hire_event.121.t
+	desc = gsk_hire_event.121.d
+	picture = gsk_hire_event.121.p
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = gsk_hire_event.121.a
+		custom_effect_tooltip = gsk_hire_event.121.a.tt
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+country_event = {#纯狐
+	id = gsk_hire_event.122
+	title = gsk_hire_event.122.t
+	desc = gsk_hire_event.122.d
+	picture = gsk_hire_event.122.p
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = gsk_hire_event.122.a
+		custom_effect_tooltip = gsk_hire_event.122.a.tt
+		set_country_flag = junko_is_recruit_flag
+		set_country_flag = hecatia_is_recruit_flag
+		ai_chance = {
+			base = 0
+		}
+	}
+}

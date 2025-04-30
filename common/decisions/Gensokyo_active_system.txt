@@ -84,6 +84,13 @@ gsk_active_system = {
 			set_country_flag = kosuzu_is_recruit_flag
 			set_country_flag = hearn_is_recruit_flag
 			set_country_flag = renko_is_recruit_flag
+			set_country_flag = seiran_is_recruit_flag
+			set_country_flag = ringo_is_recruit_flag
+			set_country_flag = doremy_is_recruit_flag
+			set_country_flag = sagume_is_recruit_flag
+			set_country_flag = clownpiece_is_recruit_flag
+			set_country_flag = junko_is_recruit_flag
+			set_country_flag = hecatia_is_recruit_flag
 			set_country_flag = gsk_system_is_enable_flag
 			set_country_flag = allow_creat_fumo_flag
 			set_variable = { gsk_var_number_of_fumo = 100 }
@@ -169,6 +176,13 @@ gsk_active_system = {
 					#has_country_flag = kosuzu_is_recruit_flag
 					#has_country_flag = hearn_is_recruit_flag
 					#has_country_flag = renko_is_recruit_flag
+					has_country_flag = seiran_is_recruit_flag
+					has_country_flag = ringo_is_recruit_flag
+					has_country_flag = doremy_is_recruit_flag
+					has_country_flag = sagume_is_recruit_flag
+					has_country_flag = clownpiece_is_recruit_flag
+					has_country_flag = junko_is_recruit_flag
+					has_country_flag = hecatia_is_recruit_flag
 				}
 			}
 		}
@@ -722,6 +736,92 @@ gsk_active_system = {
 			custom_effect_tooltip = gsk_main_event.110.a.tt
 			set_country_flag = hearn_is_recruit_flag
 			set_country_flag = renko_is_recruit_flag
+		}
+	}
+	gsk_kanjuden = { #绀珠传
+		priority = 95
+		allowed = {
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = gsk_number_of_expeditions_3_tt
+				check_variable = {
+					compare = greater_than_or_equals
+					value = 3
+					var = gsk_var_number_of_contact
+				}
+			}
+		}
+		visible = {
+			has_country_flag = gsk_system_is_enable_flag
+			not = {
+				has_country_flag = seiran_is_recruit_flag
+				has_country_flag = ringo_is_recruit_flag
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = @expeditions_days_remove
+		modifier = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_to_variable = {
+				value = -3
+				var = gsk_var_number_of_contact
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = gsk_main_event.120.a.tt
+			set_country_flag = seiran_is_recruit_flag
+			set_country_flag = ringo_is_recruit_flag
+		}
+	}
+	gsk_kanjuden_2 = { #绀珠传
+		priority = 95
+		allowed = {
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = gsk_number_of_expeditions_3_tt
+				check_variable = {
+					compare = greater_than_or_equals
+					value = 3
+					var = gsk_var_number_of_contact
+				}
+			}
+			has_country_flag = seiran_is_recruit_flag
+			has_country_flag = ringo_is_recruit_flag
+		}
+		visible = {
+			has_country_flag = gsk_system_is_enable_flag
+			not = {
+				has_country_flag = doremy_is_recruit_flag
+				has_country_flag = sagume_is_recruit_flag
+				has_country_flag = clownpiece_is_recruit_flag
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = @expeditions_days_remove
+		modifier = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_to_variable = {
+				value = -3
+				var = gsk_var_number_of_contact
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = gsk_main_event.121.a.tt
+			set_country_flag = doremy_is_recruit_flag
+			set_country_flag = sagume_is_recruit_flag
+			set_country_flag = clownpiece_is_recruit_flag
 		}
 	}
 	gsk_other_role_recruitment0 = {

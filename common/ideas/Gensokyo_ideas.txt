@@ -8,6 +8,7 @@ ideas = {
 				is_ai = no
 			}
 			modifier = {
+				special_project_speed_factor = 0.1
 				resistance_target = -0.1
 				subversive_activites_upkeep = -0.1
 				resource_trade_cost_bonus_per_factory = 1
@@ -21,6 +22,7 @@ ideas = {
 				is_ai = no
 			}
 			modifier = {
+				special_project_speed_factor = 0.3
 				resistance_target = -0.2
 				subversive_activites_upkeep = -0.3
 				resource_trade_cost_bonus_per_factory = 2
@@ -34,6 +36,7 @@ ideas = {
 				is_ai = no
 			}
 			modifier = {
+				special_project_speed_factor = 0.5
 				resistance_target = -0.3
 				subversive_activites_upkeep = -0.5
 				intelligence_agency_defense = 1

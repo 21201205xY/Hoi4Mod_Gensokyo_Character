@@ -3002,21 +3002,21 @@ gsk_kaguya_design_bureau = {
 		mio_cat_tech_all_carrier_and_modules
 		mio_cat_tech_all_submarine_and_modules
 	}
-	on_tech_research_cancelled = {
-		owner = {
-			gsk_decrease_kaguya_design_bureau_idae = yes
-		}
-	}
-	on_design_team_assigned_to_tech = {
-		owner = {
-			gsk_increase_kaguya_design_bureau_idae = yes
-		}
-	}
-	on_tech_research_completed = {
-		owner = {
-			gsk_decrease_kaguya_design_bureau_idae = yes
-		}
-	}
+	# on_tech_research_cancelled = {
+	# 	owner = {
+	# 		gsk_decrease_kaguya_design_bureau_idae = yes
+	# 	}
+	# }
+	# on_design_team_assigned_to_tech = {
+	# 	owner = {
+	# 		gsk_increase_kaguya_design_bureau_idae = yes
+	# 	}
+	# }
+	# on_tech_research_completed = {
+	# 	owner = {
+	# 		gsk_decrease_kaguya_design_bureau_idae = yes
+	# 	}
+	# }
 	#task_capacity = 1 人才P社，Wiki里写了这个变量，但是在define中根本没启用，这个变量没用
 	tree_header_text = {
 		text = gsk_mio_header_army_department

@@ -283,7 +283,7 @@ gsk_recruit_character_interaction = {
 		allowed = {
 		}
 		available = {
-			has_tech = improved_heavy_tank_chassis
+			has_tech = super_heavy_tank_chassis
 		}
 		visible = {
 			has_country_flag = gsk_system_is_enable_flag
@@ -647,6 +647,22 @@ gsk_recruit_character_interaction = {
 			mio:gsk_kaguya_design_bureau = {
 				add_mio_size = 2
 			}
+			add_breakthrough_points = {
+				specialization = specialization_land
+				value = 2
+			}
+			add_breakthrough_points = {
+				specialization = specialization_air
+				value = 2
+			}
+			add_breakthrough_points = {
+				specialization = specialization_nuclear
+				value = 2
+			}
+			add_breakthrough_points = {
+				specialization = specialization_naval
+				value = 2
+			}
 		}
 	}
 	eientei_quest5 = {
@@ -702,6 +718,22 @@ gsk_recruit_character_interaction = {
 			}
 			mio:gsk_kaguya_design_bureau = {
 				add_mio_size = 1
+			}
+			add_breakthrough_points = {
+				specialization = specialization_land
+				value = 1
+			}
+			add_breakthrough_points = {
+				specialization = specialization_air
+				value = 1
+			}
+			add_breakthrough_points = {
+				specialization = specialization_nuclear
+				value = 1
+			}
+			add_breakthrough_points = {
+				specialization = specialization_naval
+				value = 1
 			}
 		}
 	}

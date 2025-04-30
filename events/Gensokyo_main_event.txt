@@ -117,14 +117,14 @@ country_event = {
 			base = 1
 		}
 	}
-	option = { 
-		name = gsk_main_event.22.dd
-		custom_effect_tooltip = gsk_main_event.22.d.tt
-		gsk_decrease_kaguya_design_bureau_idae = yes
-		ai_chance = {
-			base = 1
-		}
-	}
+	# option = { 
+	# 	name = gsk_main_event.22.dd
+	# 	custom_effect_tooltip = gsk_main_event.22.d.tt
+	# 	gsk_decrease_kaguya_design_bureau_idae = yes
+	# 	ai_chance = {
+	# 		base = 1
+	# 	}
+	# }
 }
 country_event = { #红魔馆
 	id = gsk_main_event.30

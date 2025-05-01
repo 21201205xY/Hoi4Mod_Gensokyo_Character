@@ -412,6 +412,10 @@ spriteTypes = {
 		texturefile = "gfx/traits/junko_commander_peculiarity_traits.png"
 	}
 	spriteType = {
+		name = "GFX_trait_reisen_commander_peculiarity2"
+		texturefile = "gfx/traits/junko_commander_peculiarity_traits.png"
+	}
+	spriteType = {
 		name = "GFX_trait_hecatia_commander_peculiarity"
 		texturefile = "gfx/traits/hecatia_commander_peculiarity_traits.png"
 	}

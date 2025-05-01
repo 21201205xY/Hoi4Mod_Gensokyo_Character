@@ -790,34 +790,34 @@ gsk_recruit_character_interaction = {
 			}
 		}
 	}
-	kanjuden_quest0 = {
-		priority = 276
-		allowed = {
-		}
-		available = {
-			has_country_flag = doremy_is_recruit_flag
-			has_country_flag = clownpiece_is_recruit_flag
-			has_country_flag = sagume_is_recruit_flag
-		}
-		visible = {
-			has_country_flag = gsk_system_is_enable_flag
-			has_country_flag = seiran_is_recruit_flag
-			has_country_flag = ringo_is_recruit_flag
-		}
-		fire_only_once = yes
-		cost = 0
-		days_remove = 0
-		modifier = {
-		}
-		ai_will_do = {
-			factor = 0
-		}
-		complete_effect = {
-			country_event = gsk_hire_event.121
-		}
-		remove_effect = {
-		}
-	}
+	# kanjuden_quest0 = {
+	# 	priority = 276
+	# 	allowed = {
+	# 	}
+	# 	available = {
+	# 		has_country_flag = doremy_is_recruit_flag
+	# 		has_country_flag = clownpiece_is_recruit_flag
+	# 		has_country_flag = sagume_is_recruit_flag
+	# 	}
+	# 	visible = {
+	# 		has_country_flag = gsk_system_is_enable_flag
+	# 		has_country_flag = seiran_is_recruit_flag
+	# 		has_country_flag = ringo_is_recruit_flag
+	# 	}
+	# 	fire_only_once = yes
+	# 	cost = 0
+	# 	days_remove = 0
+	# 	modifier = {
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 	}
+	# 	complete_effect = {
+	# 		country_event = gsk_hire_event.121
+	# 	}
+	# 	remove_effect = {
+	# 	}
+	# }
 #################################################################################################
 ########                        所有蓬莱提神药特质增加放在了角色特质里                      ########
 #################################################################################################

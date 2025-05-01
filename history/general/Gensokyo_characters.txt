@@ -1764,6 +1764,7 @@ every_possible_country = {
 			}
 			traits = {
 				scientist_trait_doremy
+				scientist_trait_submarine_specialist
 			}
 			skills = {
 				specialization_naval = 3

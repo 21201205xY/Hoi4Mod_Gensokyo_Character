@@ -491,7 +491,7 @@ country_event = {#辉夜
 		}
 	}
 }
-country_event = {#纯狐
+country_event = {#探女
 	id = gsk_hire_event.121
 	title = gsk_hire_event.121.t
 	desc = gsk_hire_event.121.d
@@ -501,10 +501,49 @@ country_event = {#纯狐
 	trigger = {
 	}
 	immediate = {
+		hidden_effect = {
+			set_country_flag = kanjuden_event_completed
+		}
 	}
 	option = {
 		name = gsk_hire_event.121.a
 		custom_effect_tooltip = gsk_hire_event.121.a.tt
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = -200
+			producer = root
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -1000
+			producer = root
+		}
+		set_country_flag = doremy_is_recruit_flag
+		set_country_flag = sagume_is_recruit_flag
+		hidden_effect = {
+			country_event = {
+				days = 50
+				random_days = 10
+				id = gsk_hire_event.122
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		name = gsk_hire_event.121.b
+		custom_effect_tooltip = gsk_hire_event.121.b.tt
+		set_country_flag = doremy_is_recruit_flag
+		set_country_flag = sagume_is_recruit_flag
+		set_country_flag = reisen_is_assit_flag
+		hidden_effect = {
+			country_event = {
+				days = 30
+				random_days = 10
+				id = gsk_hire_event.123
+			}
+		}
 		ai_chance = {
 			base = 0
 		}
@@ -524,6 +563,37 @@ country_event = {#纯狐
 	option = {
 		name = gsk_hire_event.122.a
 		custom_effect_tooltip = gsk_hire_event.122.a.tt
+		set_country_flag = junko_is_recruit_flag
+		set_country_flag = hecatia_is_recruit_flag
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+country_event = {#纯狐
+	id = gsk_hire_event.123
+	title = gsk_hire_event.123.t
+	desc = gsk_hire_event.123.d
+	picture = gsk_hire_event.122.p
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = reisen_is_assit_flag
+			set_country_flag = kanjuden_event_completed
+		}
+	}
+	option = {
+		name = gsk_hire_event.123.a
+		custom_effect_tooltip = gsk_hire_event.122.a.tt
+		every_unit_leader = {
+			limit = {
+				has_trait = reisen_commander_peculiarity
+			}
+			add_unit_leader_trait = reisen_commander_peculiarity2
+		}
 		set_country_flag = junko_is_recruit_flag
 		set_country_flag = hecatia_is_recruit_flag
 		ai_chance = {

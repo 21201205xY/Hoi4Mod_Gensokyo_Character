@@ -96,6 +96,10 @@ spriteTypes = {
 		texturefile = "gfx/traits/gsk_race_moon_traits.png"
 	}
 	spriteType = {
+		name = "GFX_trait_gsk_race_tapir_navy"
+		texturefile = "gfx/traits/gsk_race_moon_traits.png"
+	}
+	spriteType = {
 		name = "GFX_trait_gsk_race_ismoon"
 		texturefile = "gfx/traits/gsk_race_moon_traits.png"
 	}
@@ -388,11 +392,15 @@ spriteTypes = {
 		texturefile = "gfx/traits/seiran_commander_peculiarity_traits.png"
 	}
 	spriteType = {
-		name = "GFX_trait_ringo_commander_peculiarity"
+		name = "GFX_trait_ringo_commander_peculiarity_navy"
 		texturefile = "gfx/traits/ringo_commander_peculiarity_traits.png"
 	}
 	spriteType = {
-		name = "GFX_trait_doremy_commander_peculiarity"
+		name = "GFX_trait_doremy_commander_peculiarity_navy"
+		texturefile = "gfx/traits/doremy_commander_peculiarity_traits.png"
+	}
+	spriteType = {
+		name = "GFX_scientist_trait_doremy"
 		texturefile = "gfx/traits/doremy_commander_peculiarity_traits.png"
 	}
 	spriteType = {

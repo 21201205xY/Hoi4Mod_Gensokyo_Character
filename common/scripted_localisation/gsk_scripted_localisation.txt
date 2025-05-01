@@ -238,6 +238,55 @@ defined_text = {
 		}
 		localization_key = choose_leader_hearn
 	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_gui_page = 29 }
+			check_variable = { gsk_var_leaders_choose_per_index = 2 }
+		}
+		localization_key = choose_leader_seiran
+	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_gui_page = 29 }
+			check_variable = { gsk_var_leaders_choose_per_index = 3 }
+		}
+		localization_key = choose_leader_ringo
+	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_gui_page = 29 }
+			check_variable = { gsk_var_leaders_choose_per_index = 5 }
+		}
+		localization_key = choose_leader_doremy
+	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_gui_page = 29 }
+			check_variable = { gsk_var_leaders_choose_per_index = 7 }
+		}
+		localization_key = choose_leader_sagume
+	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_gui_page = 29 }
+			check_variable = { gsk_var_leaders_choose_per_index = 11 }
+		}
+		localization_key = choose_leader_clownpiece
+	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_gui_page = 29 }
+			check_variable = { gsk_var_leaders_choose_per_index = 13 }
+		}
+		localization_key = choose_leader_junko
+	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_gui_page = 29 }
+			check_variable = { gsk_var_leaders_choose_per_index = 17 }
+		}
+		localization_key = choose_leader_hecatia
+	}
 }
 
 defined_text = {
@@ -473,6 +522,55 @@ defined_text = {
 		}
 		localization_key = hearn_name_s
 	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_choose_team = 29 }
+			check_variable = { gsk_var_leaders_choose_index = 2 }
+		}
+		localization_key = seiran_name
+	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_choose_team = 29 }
+			check_variable = { gsk_var_leaders_choose_index = 3 }
+		}
+		localization_key = ringo_name
+	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_choose_team = 29 }
+			check_variable = { gsk_var_leaders_choose_index = 5 }
+		}
+		localization_key = doremy_name_s
+	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_choose_team = 29 }
+			check_variable = { gsk_var_leaders_choose_index = 7 }
+		}
+		localization_key = sagume_name
+	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_choose_team = 29 }
+			check_variable = { gsk_var_leaders_choose_index = 11 }
+		}
+		localization_key = clownpiece_name
+	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_choose_team = 29 }
+			check_variable = { gsk_var_leaders_choose_index = 13 }
+		}
+		localization_key = junko_name
+	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_choose_team = 29 }
+			check_variable = { gsk_var_leaders_choose_index = 17 }
+		}
+		localization_key = hecatia_name_s
+	}
 }
 
 defined_text = {
@@ -707,5 +805,54 @@ defined_text = {
 			check_variable = { gsk_var_leaders_choose_index = 3 }
 		}
 		localization_key = "GFX_portrait_hearn"
+	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_choose_team = 29 }
+			check_variable = { gsk_var_leaders_choose_index = 2 }
+		}
+		localization_key = "GFX_portrait_seiran"
+	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_choose_team = 29 }
+			check_variable = { gsk_var_leaders_choose_index = 3 }
+		}
+		localization_key = "GFX_portrait_ringo"
+	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_choose_team = 29 }
+			check_variable = { gsk_var_leaders_choose_index = 5 }
+		}
+		localization_key = "GFX_portrait_doremy"
+	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_choose_team = 29 }
+			check_variable = { gsk_var_leaders_choose_index = 7 }
+		}
+		localization_key = "GFX_portrait_sagume"
+	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_choose_team = 29 }
+			check_variable = { gsk_var_leaders_choose_index = 11 }
+		}
+		localization_key = "GFX_portrait_clownpiece"
+	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_choose_team = 29 }
+			check_variable = { gsk_var_leaders_choose_index = 13 }
+		}
+		localization_key = "GFX_portrait_junko"
+	}
+	text = {
+		trigger = {
+			check_variable = { gsk_var_leaders_choose_team = 29 }
+			check_variable = { gsk_var_leaders_choose_index = 17 }
+		}
+		localization_key = "GFX_portrait_hecatia"
 	}
 }

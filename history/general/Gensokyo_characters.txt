@@ -992,6 +992,7 @@ every_possible_country = {
 			visible = { 
 				is_ai = no
 				has_country_flag = reisen_is_recruit_flag
+				not  = { has_country_flag = reisen_is_assit_flag }
 			}
 		}
 		advisor={
@@ -1006,6 +1007,7 @@ every_possible_country = {
 			}
 			available = {
 				has_country_flag = reisen_is_recruit_flag
+				not  = { has_country_flag = reisen_is_assit_flag }
 			}
 			traits = {
 				gsk_advisor_reisen
@@ -1646,4 +1648,301 @@ every_possible_country = {
 			}
 		}
 	}
+	generate_character = {#清兰
+		token_base = gsk_commander_seiran
+		name = seiran_name
+		portraits={
+			army={
+				large= "GFX_portrait_seiran"
+				small="gfx/ideas/gsk_ideas_seiran.dds"
+			}
+		}
+		allowed_civil_war = {
+			is_ai = no
+		}
+		corps_commander = {
+			traits = {
+				from_gsk
+				gsk_race_moonrabbit
+				seiran_commander_peculiarity
+			}
+			attack_skill = 1
+			defense_skill = 5
+			planning_skill = 2
+			logistics_skill = 2
+			skill = 3
+			visible = {
+				is_ai = no
+				has_country_flag = seiran_is_recruit_flag
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = gsk_advisor_seiran
+			ledger = army
+			desc = advisor_seiran_desc
+			cost = 100
+			visible = { 
+				is_ai = no
+				has_country_flag = gsk_system_is_enable_flag
+			}
+			available = {
+				has_country_flag = seiran_is_recruit_flag
+			}
+			traits = {
+				gsk_advisor_seiran
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	generate_character = {#铃瑚
+		token_base = gsk_commander_ringo
+		name = ringo_name
+		portraits={
+			army={
+				large= "GFX_portrait_ringo"
+				small="gfx/ideas/gsk_ideas_ringo.dds"
+			}
+		}
+		allowed_civil_war = {
+			is_ai = no
+		}
+		navy_leader = {
+			traits = {
+				from_gsk_navy
+				gsk_race_moonrabbit_navy
+				ringo_commander_peculiarity_navy
+			}
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 3
+			skill = 3
+			visible = {
+				is_ai = no
+				has_country_flag = renko_is_recruit_flag
+			}
+		}
+	}
+	generate_character = {#哆来咪
+		token_base = gsk_commander_doremy
+		name = doremy_name
+		portraits={
+			army={
+				large= "GFX_portrait_doremy"
+				small="gfx/ideas/gsk_ideas_doremy.dds"
+			}
+		}
+		allowed_civil_war = {
+			is_ai = no
+		}
+		navy_leader = {
+			traits = {
+				from_gsk_navy
+				gsk_race_tapir_navy
+				doremy_commander_peculiarity_navy
+			}
+			attack_skill = 4
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 3
+			skill = 3
+			visible = {
+				is_ai = no
+				has_country_flag = doremy_is_recruit_flag
+			}
+		}
+		scientist = {
+			visible = {
+				owner = {
+					is_ai = no
+					has_country_flag = gsk_system_is_enable_flag
+					has_country_flag = doremy_is_recruit_flag
+				}
+			}
+			traits = {
+				scientist_trait_doremy
+			}
+			skills = {
+				specialization_naval = 3
+			}
+		}
+	}
+	generate_character = {#稀神探女
+		token_base = gsk_commander_sagume
+		name = sagume_name
+		portraits={
+			army={
+				large= "GFX_portrait_sagume"
+				small="gfx/ideas/gsk_ideas_sagume.dds"
+			}
+		}
+		allowed_civil_war = {
+			is_ai = no
+		}
+		corps_commander = {
+			traits = {
+				from_gsk
+				gsk_race_moon
+				sagume_commander_peculiarity
+			}
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
+			skill = 3
+			visible = {
+				is_ai = no
+				has_country_flag = sagume_is_recruit_flag
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = gsk_advisor_sagume
+			ledger = army
+			desc = advisor_sagume_desc
+			cost = 100
+			visible = { 
+				is_ai = no
+				has_country_flag = gsk_system_is_enable_flag
+			}
+			available = {
+				has_country_flag = sagume_is_recruit_flag
+			}
+			traits = {
+				gsk_advisor_sagume
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		scientist = {
+			visible = {
+				owner = {
+					is_ai = no
+					has_country_flag = gsk_system_is_enable_flag
+					has_country_flag = sagume_is_recruit_flag
+				}
+			}
+			traits = {
+				scientist_trait_sagume
+				scientist_trait_aircraft_specialist
+
+			}
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
+	generate_character = {#克劳恩皮丝
+		token_base = gsk_commander_clownpiece
+		name = clownpiece_name
+		portraits={
+			army={
+				large= "GFX_portrait_clownpiece"
+				small="gfx/ideas/gsk_ideas_clownpiece.dds"
+			}
+		}
+		allowed_civil_war = {
+			is_ai = no
+		}
+		corps_commander = {
+			traits = {
+				from_gsk
+				gsk_race_evil_spirit
+				clownpiece_commander_peculiarity
+			}
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			skill = 3
+			visible = {
+				is_ai = no
+				has_country_flag = renko_is_recruit_flag
+			}
+		}
+	}
+	generate_character = {#纯狐
+		token_base = gsk_commander_junko
+		name = junko_name
+		portraits={
+			army={
+				large= "GFX_portrait_junko"
+				small="gfx/ideas/gsk_ideas_junko.dds"
+			}
+		}
+		allowed_civil_war = {
+			is_ai = no
+		}
+		field_marshal = {
+			traits = {
+				from_gsk
+				gsk_race_god
+				junko_commander_peculiarity
+			}
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 4
+			skill = 3
+			visible = {
+				is_ai = no
+				has_country_flag = junko_is_recruit_flag
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = gsk_advisor_junko
+			ledger = army
+			desc = advisor_junko_desc
+			cost = 100
+			visible = { 
+				is_ai = no
+				has_country_flag = gsk_system_is_enable_flag
+			}
+			available = {
+				has_country_flag = junko_is_recruit_flag
+			}
+			traits = {
+				gsk_advisor_junko
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	generate_character = {#赫卡提亚
+		token_base = gsk_commander_hecatia
+		name = hecatia_name
+		portraits={
+			army={
+				large= "GFX_portrait_hecatia"
+				small="gfx/ideas/gsk_ideas_hecatia.dds"
+			}
+		}
+		allowed_civil_war = {
+			is_ai = no
+		}
+		field_marshal = {
+			traits = {
+				from_gsk
+				gsk_race_god
+				hecatia_commander_peculiarity
+			}
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 4
+			skill = 3
+			visible = {
+				is_ai = no
+				has_country_flag = hecatia_is_recruit_flag
+			}
+		}
+	}
+
+
 }

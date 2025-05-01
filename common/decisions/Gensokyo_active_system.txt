@@ -784,15 +784,13 @@ gsk_active_system = {
 		allowed = {
 		}
 		available = {
-			OR = {
+			AND = {
 				has_country_flag = reisen_is_recruit_flag
-				AND = {
-					has_equipment = {
-						infantry_equipment > 999
-					}
-					has_equipment = {
-						artillery_equipment > 199
-					}
+				has_equipment = {
+					infantry_equipment > 999
+				}
+				has_equipment = {
+					artillery_equipment > 199
 				}
 			}
 			has_country_flag = seiran_is_recruit_flag
@@ -814,13 +812,9 @@ gsk_active_system = {
 			factor = 0
 		}
 		complete_effect = {
-			add_to_variable = {
-				value = -1
-				var = gsk_var_number_of_contact
-			}
+			country_event = gsk_hire_event.121
 		}
 		remove_effect = {
-			country_event = gsk_hire_event.121
 		}
 	}
 	# gsk_kanjuden_3 = { #纯狐

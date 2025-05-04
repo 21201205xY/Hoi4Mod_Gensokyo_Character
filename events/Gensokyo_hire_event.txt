@@ -565,6 +565,7 @@ country_event = {#纯狐
 		custom_effect_tooltip = gsk_hire_event.122.a.tt
 		set_country_flag = junko_is_recruit_flag
 		set_country_flag = hecatia_is_recruit_flag
+		set_country_flag = clownpiece_is_recruit_flag
 		ai_chance = {
 			base = 0
 		}
@@ -596,6 +597,7 @@ country_event = {#纯狐
 		}
 		set_country_flag = junko_is_recruit_flag
 		set_country_flag = hecatia_is_recruit_flag
+		set_country_flag = clownpiece_is_recruit_flag
 		ai_chance = {
 			base = 0
 		}

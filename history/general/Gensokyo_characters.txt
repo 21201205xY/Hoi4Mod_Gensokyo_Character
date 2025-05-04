@@ -1862,7 +1862,7 @@ every_possible_country = {
 			skill = 3
 			visible = {
 				is_ai = no
-				has_country_flag = renko_is_recruit_flag
+				has_country_flag = clownpiece_is_recruit_flag
 			}
 		}
 	}

@@ -1451,7 +1451,7 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-			army_org = 0.2
+			org_loss_at_low_org_factor = -0.3
 			army_org_regain = 0.5
 			org_loss_when_moving = -0.3
 		}
@@ -1463,6 +1463,7 @@ leader_traits = {
 		new_commander_weight = {
 			factor = 0
 		}
+		
 	}
 	junko_commander_peculiarity = {
 		type = all

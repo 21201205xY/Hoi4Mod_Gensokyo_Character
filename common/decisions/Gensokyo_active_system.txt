@@ -180,9 +180,9 @@ gsk_active_system = {
 					has_country_flag = ringo_is_recruit_flag
 					has_country_flag = doremy_is_recruit_flag
 					has_country_flag = sagume_is_recruit_flag
-					has_country_flag = clownpiece_is_recruit_flag
-					has_country_flag = junko_is_recruit_flag
-					has_country_flag = hecatia_is_recruit_flag
+					# has_country_flag = clownpiece_is_recruit_flag
+					# has_country_flag = junko_is_recruit_flag
+					# has_country_flag = hecatia_is_recruit_flag
 				}
 			}
 		}

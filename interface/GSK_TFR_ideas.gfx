@@ -39,4 +39,24 @@ spriteTypes = {
         name = "GFX_idea_kosuzu"
         texturefile = "gfx/ideas/gsk_ideas_kosuzu.dds"
     }
+    spriteType = {
+        name = "GFX_idea_hearn"
+        texturefile = "gfx/ideas/gsk_ideas_hearn.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_renko"
+        texturefile = "gfx/ideas/gsk_ideas_renko.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_seiran"
+        texturefile = "gfx/ideas/gsk_ideas_seiran.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_sagume"
+        texturefile = "gfx/ideas/gsk_ideas_sagume.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_junko"
+        texturefile = "gfx/ideas/gsk_ideas_junko.dds"
+    }
 }

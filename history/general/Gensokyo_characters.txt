@@ -1542,6 +1542,34 @@ every_possible_country = {
 			ai_will_do = {
 				factor = 1
 			}
+			# on_add = {
+			# 	FROM = {
+			# 		set_temp_variable = {
+			# 			var = academic_development_var_temp 
+			# 			value = 0.01
+			# 		}
+			# 		add_academic_development = yes
+			# 		set_temp_variable = {
+			# 			var = industrial_development_var_temp 
+			# 			value = 0.01
+			# 		}
+			# 		add_industrial_development = yes
+			# 	}
+			# }
+			# on_remove = {
+			# 	FROM = {
+			# 		set_temp_variable = {
+			# 			var = academic_development_var_temp 
+			# 			value = -0.01
+			# 		}
+			# 		add_academic_development = yes
+			# 		set_temp_variable = {
+			# 			var = industrial_development_var_temp 
+			# 			value = -0.01
+			# 		}
+			# 		add_industrial_development = yes
+			# 	}
+			# }
 		}
 		scientist = {
 			visible = {
@@ -1613,6 +1641,11 @@ every_possible_country = {
 						remove_unit_leader_trait = renko_commander_peculiarity
 						add_unit_leader_trait = renko_commander_peculiarity1
 					}
+					# set_temp_variable = {
+					# 	var = society_development_var_temp 
+					# 	value = 0.01
+					# }
+					# add_society_development = yes
 				}
 				custom_effect_tooltip = gsk_advisor_hearn_tt
 			}
@@ -1625,6 +1658,11 @@ every_possible_country = {
 						remove_unit_leader_trait = renko_commander_peculiarity1
 						add_unit_leader_trait = renko_commander_peculiarity
 					}
+					# set_temp_variable = {
+					# 	var = society_development_var_temp 
+					# 	value = -0.01
+					# }
+					# add_society_development = yes
 				}
 			}
 			ai_will_do = {

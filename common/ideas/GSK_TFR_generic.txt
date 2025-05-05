@@ -2,24 +2,24 @@
 
 ideas = {
 
-    head_minister = {
-        vacant_hog = {
-            picture = generic_vacant
-            name = vacant
-            default = yes
-            cost = @defineCost
-            allowed = {
-                always = yes
-            }
-            visible = {
-            }
-            allowed_to_remove = {
-                head_minister_trigger = yes
-            }
-            traits = {
-            }
-        }
-    }
+    # head_minister = {
+    #     vacant_hog = {
+    #         picture = generic_vacant
+    #         name = vacant
+    #         default = yes
+    #         cost = @defineCost
+    #         allowed = {
+    #             always = yes
+    #         }
+    #         visible = {
+    #         }
+    #         allowed_to_remove = {
+    #             head_minister_trigger = yes
+    #         }
+    #         traits = {
+    #         }
+    #     }
+    # }
 
     foreign_minister = {
         aya_for = {
@@ -76,6 +76,40 @@ ideas = {
                 gsk_advisor_yuyuko
             }
         }
+        hearn_eco = {
+            picture = hearn
+            name = hearn_name
+            cost = @defineCost
+            allowed = {
+                always = yes
+            }
+            visible = {
+                has_global_flag = find_gsk
+            }
+            available = {
+                has_country_flag = hearn_is_recruit_flag
+            }
+            traits = {
+                gsk_advisor_hearn
+            }
+        }
+        renko_eco = {
+            picture = renko
+            name = renko_name
+            cost = @defineCost
+            allowed = {
+                always = yes
+            }
+            visible = {
+                has_global_flag = find_gsk
+            }
+            available = {
+                has_country_flag = renko_is_recruit_flag
+            }
+            traits = {
+                gsk_advisor_renko
+            }
+        }
     }
 
     interior_minister = {
@@ -94,6 +128,40 @@ ideas = {
             }
             traits = {
                 gsk_advisor_akyuu
+            }
+        }
+        seiran_sec = {
+            picture = seiran
+            name = seiran_name
+            cost = @defineCost
+            allowed = {
+                always = yes
+            }
+            visible = {
+                has_global_flag = find_gsk
+            }
+            available = {
+                has_country_flag = seiran_is_recruit_flag
+            }
+            traits = {
+                gsk_advisor_seiran
+            }
+        }
+        sagume_sec = {
+            picture = sagume
+            name = sagume_name
+            cost = @defineCost
+            allowed = {
+                always = yes
+            }
+            visible = {
+                has_global_flag = find_gsk
+            }
+            available = {
+                has_country_flag = sagume_is_recruit_flag
+            }
+            traits = {
+                gsk_advisor_sagume
             }
         }
     }

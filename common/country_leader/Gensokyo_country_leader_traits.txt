@@ -160,6 +160,7 @@ leader_traits = {
 		political_power_factor = 0.25
 		drift_defence_factor = 0.3
 		political_power_gain = 1
+		dtg_threshold = 0.3
 		
 		ai_will_do = {
 			factor = 1
@@ -194,7 +195,8 @@ leader_traits = {
 		
 		offence = 0.05
 		consumer_goods_factor = 0.15
-		production_speed_industrial_complex_factor = 0.3
+		production_speed_industrial_complex_factor = 0.25
+		production_speed_office_park_factor = 0.25
 		industrial_capacity_factory = 0.15
 		
 		ai_will_do = {
@@ -330,6 +332,9 @@ leader_traits = {
 	gsk_advisor_hearn = {
 		random = no
 		
+		income_growth_factor = 0.05
+		expense_growth_factor = -0.05
+		personal_expense = -0.01
 
 		ai_will_do = {
 			factor = 1
@@ -338,9 +343,9 @@ leader_traits = {
 	gsk_advisor_renko = {
 		random = no
 
-		production_speed_facility_factor = 0.2
-		special_project_speed_factor = 0.2
-		special_project_facility_supply_consumption_factor = -0.2
+		tax_business_rate = 0.05
+		business_value_factor = 0.15
+		business_value = 3
 
 		ai_will_do = {
 			factor = 1
@@ -363,6 +368,7 @@ leader_traits = {
 		production_speed_buildings_factor = 0.2
 		research_speed_factor = 0.1
 		local_resources_factor = 0.2
+		inflation_monthly = 0.0005
 
 		ai_will_do = {
 			factor = 1

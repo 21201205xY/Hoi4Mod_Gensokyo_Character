@@ -100,6 +100,11 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 		iconType = {
+			name = "background_kanjuden"
+			spriteType = "GFX_background_kanjuden"
+			alwaystransparent = yes
+		}
+		iconType = {
 			name = "background_other"
 			spriteType = "GFX_background_other"
 			position = { x = 0 y = 0 }
@@ -279,19 +284,19 @@ guiTypes = {
 			maxWidth = 146
 		}
 		buttonType = {
-			name = "choose_none_"
+			name = "choose_kanjuden"
 			position = { x = @pre_choose_row_3 y = @pre_choose_col_1 }
 			quadTextureSprite = "GFX_btn_dropdown"
 			scale = 0.6
 			#pdx_tooltip = choose_eientei_button_tt
 		}
 		instantTextboxType = {
-			name = "choose_none_button_tt_"
+			name = "choose_kanjuden_button_tt"
 			position = { x = @pre_choose_row_3 y = 138 }
 			orientation = UPPER_LEFT
 			font = "hoi_18mbs"
 			alwaystransparent = yes
-			#text = choose_eientei_button_tt
+			text = choose_kanjuden_button_tt
 			format = center
 			maxWidth = 146
 		}
@@ -628,6 +633,55 @@ guiTypes = {
 			position = { x = @row_scale_35 y = @col_scale_2 }
 			quadTextureSprite = GFX_portrait_hearn
 			pdx_tooltip = hearn_name
+			scale = 0.6
+		}
+		buttonType = { #绀珠传
+			name = "choose_seiran"
+			position = { x = @row_scale_15 y = @col_scale_2 }
+			quadTextureSprite = GFX_portrait_seiran
+			pdx_tooltip = seiran_name
+			scale = 0.6
+		}
+		buttonType = {
+			name = "choose_ringo"
+			position = { x = @row_scale_35 y = @col_scale_2 }
+			quadTextureSprite = GFX_portrait_ringo
+			pdx_tooltip = ringo_name
+			scale = 0.6
+		}
+		buttonType = {
+			name = "choose_doremy"
+			position = { x = @row_scale_55 y = @col_scale_2 }
+			quadTextureSprite = GFX_portrait_doremy
+			pdx_tooltip = doremy_name
+			scale = 0.6
+		}
+		buttonType = {
+			name = "choose_sagume"
+			position = { x = @row_scale_75 y = @col_scale_2 }
+			quadTextureSprite = GFX_portrait_sagume
+			pdx_tooltip = sagume_name
+			scale = 0.6
+		}
+		buttonType = {
+			name = "choose_clownpiece"
+			position = { x = @row_scale_15 y = @col_scale_45 }
+			quadTextureSprite = GFX_portrait_clownpiece
+			pdx_tooltip = clownpiece_name
+			scale = 0.6
+		}
+		buttonType = {
+			name = "choose_junko"
+			position = { x = @row_scale_35 y = @col_scale_45 }
+			quadTextureSprite = GFX_portrait_junko
+			pdx_tooltip = junko_name
+			scale = 0.6
+		}
+		buttonType = {
+			name = "choose_hecatia"
+			position = { x = @row_scale_55 y = @col_scale_45 }
+			quadTextureSprite = GFX_portrait_hecatia
+			pdx_tooltip = hecatia_name
 			scale = 0.6
 		}
 
@@ -1061,6 +1115,77 @@ guiTypes = {
 			font = "hoi_18mbs"
 			alwaystransparent = yes
 			text = hearn_name
+			format = center
+			maxWidth = 146
+		}
+	#永远亭名字
+		instantTextboxType = {
+			name = "seiran_name"
+			position = { x = 122 y = 330 }
+			orientation = UPPER_LEFT
+			font = "hoi_18mbs"
+			alwaystransparent = yes
+			text = seiran_name
+			format = center
+			maxWidth = 146
+		}
+		instantTextboxType = {
+			name = "ringo_name"
+			position = { x = 322 y = 330 }
+			orientation = UPPER_LEFT
+			font = "hoi_18mbs"
+			alwaystransparent = yes
+			text = ringo_name
+			format = center
+			maxWidth = 146
+		}
+		instantTextboxType = {
+			name = "doremy_name"
+			position = { x = 522 y = 330 }
+			orientation = UPPER_LEFT
+			font = "hoi_18mbs"
+			alwaystransparent = yes
+			text = doremy_name_s
+			format = center
+			maxWidth = 146
+		}
+		instantTextboxType = {
+			name = "sagume_name"
+			position = { x = 722 y = 330 }
+			orientation = UPPER_LEFT
+			font = "hoi_18mbs"
+			alwaystransparent = yes
+			text = sagume_name
+			format = center
+			maxWidth = 146
+		}
+		instantTextboxType = {
+			name = "clownpiece_name"
+			position = { x = 122 y = 580 }
+			orientation = UPPER_LEFT
+			font = "hoi_18mbs"
+			alwaystransparent = yes
+			text = clownpiece_name
+			format = center
+			maxWidth = 146
+		}
+		instantTextboxType = {
+			name = "junko_name"
+			position = { x = 322 y = 580 }
+			orientation = UPPER_LEFT
+			font = "hoi_18mbs"
+			alwaystransparent = yes
+			text = junko_name
+			format = center
+			maxWidth = 146
+		}
+		instantTextboxType = {
+			name = "hecatia_name"
+			position = { x = 522 y = 580 }
+			orientation = UPPER_LEFT
+			font = "hoi_18mbs"
+			alwaystransparent = yes
+			text = hecatia_name_s
 			format = center
 			maxWidth = 146
 		}

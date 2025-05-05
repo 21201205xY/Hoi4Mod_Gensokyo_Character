@@ -76,3 +76,17 @@ scientist_trait_hearn = {
 		scientist_research_bonus_factor = 0.1
 	}
 }
+scientist_trait_sagume = {
+	icon = GFX_scientist_trait_sagume
+	modifier = {
+		special_project_speed_factor = 0.15
+		scientist_breakthrough_bonus_factor = 0.15
+	}
+}
+scientist_trait_doremy = {
+	icon = GFX_scientist_trait_doremy
+	modifier = {
+		special_project_speed_factor = 0.1
+		special_project_facility_supply_consumption_factor = -0.3
+	}
+}

@@ -1,4 +1,51 @@
 ideas = {
+	industrial_concern = {
+
+		designer = yes
+
+		gsk_industrial_concern = { #工会
+			picture = gsk_industrial_concern
+			allowed = {
+
+			}
+			visible = {
+				has_country_flag = gsk_system_is_enable_flag
+			}
+			available = {
+				has_country_flag = ringo_is_recruit_flag
+				has_country_flag = seiran_is_recruit_flag
+				has_country_flag = reisen_is_recruit_flag
+			}
+			research_bonus = {
+			}
+			
+			traits = { gsk_idea_industrial_concern }
+		}
+		
+		gsk_tech = { #研究所
+			picture = gsk_tech
+			allowed = {
+
+			}
+			visible = {
+				has_country_flag = gsk_system_is_enable_flag
+			}
+			available = {
+				has_country_flag = kanjuden_event_completed
+			}
+			research_bonus = {
+			}
+			on_add = {
+				add_research_slot = 1
+			}
+			on_remove = {
+				add_research_slot = -1
+			}
+			
+			traits = { gsk_idea_research_institute }
+		}
+	}
+	
 	country = {
 		gsk_embodiment_idea0 = {
 			allowed = {
@@ -8,6 +55,7 @@ ideas = {
 				is_ai = no
 			}
 			modifier = {
+				special_project_speed_factor = 0.1
 				resistance_target = -0.1
 				subversive_activites_upkeep = -0.1
 				resource_trade_cost_bonus_per_factory = 1
@@ -21,6 +69,7 @@ ideas = {
 				is_ai = no
 			}
 			modifier = {
+				special_project_speed_factor = 0.3
 				resistance_target = -0.2
 				subversive_activites_upkeep = -0.3
 				resource_trade_cost_bonus_per_factory = 2
@@ -34,6 +83,7 @@ ideas = {
 				is_ai = no
 			}
 			modifier = {
+				special_project_speed_factor = 0.5
 				resistance_target = -0.3
 				subversive_activites_upkeep = -0.5
 				intelligence_agency_defense = 1

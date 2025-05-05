@@ -28,12 +28,21 @@ gsk_leader_kokoro.png 79803247 Bison倉鼠
 gsk_leader_marisa.png 110233925 にゃんあや
 gsk_leader_yuka.png 101560824 Orchid - オルキド
 gsk_leader_yukari.png 54655598 蒼咲ゆきな＠2日目東ス84a
-gsk_leader_shikieiki.dds 54061278 乃樹坂くしお
+gsk_leader_shikieiki.dds 128975497 安德小骸
 gsk_leader_renko.dds 59422378 Lumo_1121
 gsk_leader_hearn.dds 105630711 蟻丼
+gsk_leader_seiran.dds 124455564 ルナルナ
+gsk_leader_ringo.dds  56703160 りひと
+gsk_leader_doremy.dds  人妖名鉴
+gsk_leader_sagume.dds 100221378 Misekiss@C105
+gsk_leader_clownpiece.dds 100682820 ナンコツ
+gsk_leader_junko.dds  98988172 木村棗
+gsk_leader_hecatia.dds  118907466 だいわごりら
 gsk_hire_event.33.png 9851575 ふぐの
 gsk_hire_event.71.png 106827537 Munchem-慕尼
 gsk_hire_event.72.png 93204135 柏森たま。
+gsk_hire_event.122.png 52174229 鼓湖
+gsk_hire_event.121.png 50365040 ひよすけ
 gsk_main.png 53031871 oO大黄Oo
 gsk_main_event.2.png 66231473 ソメイよしのり
 gsk_main_event.21.png 95363719 黄瓜

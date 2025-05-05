@@ -20,7 +20,7 @@ scripted_gui = {
 			choose_eientei_visible = { check_variable = { gsk_var_leaders_gui_per_page = 2 } }
 			choose_other_visible = { check_variable = { gsk_var_leaders_gui_per_page = 2 } }
 			choose_hearnandrenko_visible = { check_variable = { gsk_var_leaders_gui_per_page = 2 } }
-			#choose_lunar_capital_click = { check_variable = { gsk_var_leaders_gui_per_page = 2 } }
+			choose_kanjuden_click = { check_variable = { gsk_var_leaders_gui_per_page = 2 } }
 
 			background_scarlet_devil_visible = { check_variable = { gsk_var_leaders_gui_page = 2 } }
 			background_human_village_visible = { check_variable = { gsk_var_leaders_gui_page = 3 } }
@@ -31,6 +31,7 @@ scripted_gui = {
 			background_eientei_visible = { check_variable = { gsk_var_leaders_gui_page = 17 } }
 			background_other_visible = { check_variable = { gsk_var_leaders_gui_page = 19 } }
 			background_hearnandrenko_visible = { check_variable = { gsk_var_leaders_gui_page = 23 } }
+			background_kanjuden_visible = { check_variable = { gsk_var_leaders_gui_page = 29 } }
 
 			choose_remilia_visible = { check_variable = { gsk_var_leaders_gui_page = 2 } }
 			choose_flandre_visible = { check_variable = { gsk_var_leaders_gui_page = 2 } }
@@ -104,6 +105,21 @@ scripted_gui = {
 			choose_hearn_visible = { check_variable = { gsk_var_leaders_gui_page = 23 } }
 			renko_name_visible = { check_variable = { gsk_var_leaders_gui_page = 23 } }
 			hearn_name_visible = { check_variable = { gsk_var_leaders_gui_page = 23 } }
+
+			choose_seiran_visible = { check_variable = { gsk_var_leaders_gui_page = 29 } }
+			choose_ringo_visible = { check_variable = { gsk_var_leaders_gui_page = 29 } }
+			choose_doremy_visible = { check_variable = { gsk_var_leaders_gui_page = 29 } }
+			choose_sagume_visible = { check_variable = { gsk_var_leaders_gui_page = 29 } }
+			choose_clownpiece_visible = { check_variable = { gsk_var_leaders_gui_page = 29 } }
+			choose_junko_visible = { check_variable = { gsk_var_leaders_gui_page = 29 } }
+			choose_hecatia_visible = { check_variable = { gsk_var_leaders_gui_page = 29 } }
+			seiran_name_visible = { check_variable = { gsk_var_leaders_gui_page = 29 } }
+			ringo_name_visible = { check_variable = { gsk_var_leaders_gui_page = 29 } }
+			doremy_name_visible = { check_variable = { gsk_var_leaders_gui_page = 29 } }
+			sagume_name_visible = { check_variable = { gsk_var_leaders_gui_page = 29 } }
+			clownpiece_name_visible = { check_variable = { gsk_var_leaders_gui_page = 29 } }
+			junko_name_visible = { check_variable = { gsk_var_leaders_gui_page = 29 } }
+			hecatia_name_visible = { check_variable = { gsk_var_leaders_gui_page = 29 } }
 		}
 		effects = {
 			# pre_button_click = {
@@ -148,6 +164,7 @@ scripted_gui = {
 			choose_eientei_click = { set_variable = { gsk_var_leaders_gui_page = 17 } }
 			choose_other_click = { set_variable = { gsk_var_leaders_gui_page = 19 } }
 			choose_hearnandrenko_click = { set_variable = { gsk_var_leaders_gui_page = 23 } }
+			choose_kanjuden_click = { set_variable = { gsk_var_leaders_gui_page = 29 } }
 			#choose_hakugyokurou = { set_variable = { gsk_var_leaders_gui_page = 0 } }
 
 			advisor_1_trait_click = { set_variable = { gsk_var_leaders_choose_per_index = 2 } }

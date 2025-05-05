@@ -224,6 +224,19 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	gsk_race_moonrabbit_navy = {
+		type = all
+		trait_type = personality_trait
+		modifier = {
+			naval_night_attack = 0.2
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	gsk_race_rabbit_navy = {
 		type = all
 		trait_type = personality_trait
@@ -272,7 +285,20 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-			naval_night_attack = 0.15
+			naval_night_attack = 0.2
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	gsk_race_tapir_navy = {
+		type = all
+		trait_type = personality_trait
+		modifier = {
+			naval_night_attack = 0.2
 		}
 		new_commander_weight = {
 			factor = 0
@@ -1155,6 +1181,7 @@ leader_traits = {
 			convoy_raiding_efficiency_factor = 0.3
 			convoy_retreat_speed = 0.15
 			navy_max_range_factor = 0.25
+			naval_detection = 0.5
 		}
 		non_shared_modifier = {
 		}
@@ -1325,6 +1352,143 @@ leader_traits = {
 			army_attack_against_minor_factor = 0.2
 			army_breakthrough_against_minor_factor = 0.2
 			army_defence_against_minor_factor = 0.2
+		}
+		non_shared_modifier = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	reisen_commander_peculiarity2 = {
+		type = all
+		trait_type = personality_trait
+		modifier = {
+			army_attack_factor = 0.1
+		}
+		non_shared_modifier = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	seiran_commander_peculiarity = {
+		type = all
+		trait_type = personality_trait
+		modifier = {
+			breakthrough_factor = -0.2
+			army_attack_factor = -0.1
+			army_defence_factor = 0.35
+			army_core_defence_factor = 0.35
+		}
+		non_shared_modifier = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	ringo_commander_peculiarity_navy = {
+		type = all
+		trait_type = personality_trait
+		modifier = {
+			naval_night_attack = 0.3
+			night_spotting_chance = 0.3
+			convoy_raiding_efficiency_factor = 0.5
+			navy_anti_air_attack_factor = 0.3
+		}
+		non_shared_modifier = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	doremy_commander_peculiarity_navy = {
+		type = all
+		trait_type = personality_trait
+		modifier = {
+			naval_critical_score_chance_factor = 0.3
+			naval_defense_factor = 0.2
+			navy_anti_air_attack_factor = 0.3
+		}
+		non_shared_modifier = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	sagume_commander_peculiarity = {
+		type = all
+		trait_type = personality_trait
+		modifier = {
+			max_planning_factor = 0.2
+			air_superiority_bonus_in_combat = 1
+			max_planning = 0.15
+		}
+		non_shared_modifier = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	clownpiece_commander_peculiarity = {
+		type = all
+		trait_type = personality_trait
+		modifier = {
+			org_loss_at_low_org_factor = -0.3
+			army_org_regain = 0.5
+			org_loss_when_moving = -0.3
+		}
+		non_shared_modifier = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+		
+	}
+	junko_commander_peculiarity = {
+		type = all
+		trait_type = personality_trait
+		modifier = {
+			army_artillery_attack_factor = 0.3
+			army_infantry_attack_factor = 0.3
+			breakthrough_factor = 0.3
+		}
+		non_shared_modifier = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+	hecatia_commander_peculiarity = {
+		type = all
+		trait_type = personality_trait
+		modifier = {
+			army_attack_factor = 0.1
+			army_defence_factor = 0.1
+			breakthrough_factor = 0.15
 		}
 		non_shared_modifier = {
 		}

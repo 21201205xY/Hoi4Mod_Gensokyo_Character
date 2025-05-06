@@ -193,7 +193,7 @@ leader_traits = {
 	gsk_advisor_yuyuko = {
 		random = no
 		
-		offence = 0.05
+		army_attack_factor = 0.05
 		consumer_goods_factor = 0.15
 		production_speed_industrial_complex_factor = 0.25
 		production_speed_office_park_factor = 0.25
@@ -380,7 +380,7 @@ leader_traits = {
 		stability_factor = -0.5
 		monthly_population = -1
 		war_support_factor = 1
-		offence = 1
+		army_attack_factor = 1
 
 		ai_will_do = {
 			factor = 1

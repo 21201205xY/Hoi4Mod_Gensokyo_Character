@@ -139,6 +139,7 @@ gsk_active_system = {
 		}
 		visible = {
 			is_ai = no
+			num_of_civilian_factories_available_for_projects > 3
 			has_country_flag = gsk_system_is_enable_flag
 			NOT = {
 				has_country_flag = gsk_begin_add_contact_flag
@@ -197,6 +198,75 @@ gsk_active_system = {
 		remove_effect = {
 		}
 	}
+	gsk_begin_add_contact_2 = {
+		priority = 500
+		allowed = {
+		}
+		available = {
+			has_manpower > 50
+			num_of_civilian_factories_available_for_projects < 4
+		}
+		visible = {
+			is_ai = no
+			num_of_civilian_factories_available_for_projects < 4
+			has_country_flag = gsk_system_is_enable_flag
+			NOT = {
+				has_country_flag = gsk_begin_add_contact_flag
+				AND = {
+					has_country_flag = remilia_is_recruit_flag
+					has_country_flag = sakuya_is_recruit_flag
+					has_country_flag = keine_is_recruit_flag
+					has_country_flag = akyuu_is_recruit_flag
+					has_country_flag = reimu_is_recruit_flag
+					has_country_flag = marisa_is_recruit_flag
+					#has_country_flag = gsk_alice_is_recruit_flag
+					#has_country_flag = gsk_alice_is_recruit_flag1
+					#has_country_flag = patchouli_is_recruit_flag
+					has_country_flag = sanae_is_recruit_flag
+					has_country_flag = kanako_is_recruit_flag
+					has_country_flag = suwako_is_recruit_flag
+					has_country_flag = satori_is_recruit_flag
+					has_country_flag = koishi_is_recruit_flag
+					has_country_flag = youmu_is_recruit_flag
+					has_country_flag = yuyuko_is_recruit_flag
+					has_country_flag = tewi_is_recruit_flag
+					has_country_flag = reisen_is_recruit_flag
+					#has_country_flag = kaguya_is_recruit_flag
+					#has_country_flag = mokou_is_recruit_flag
+					#has_country_flag = yagokoro_is_recruit_flag
+					#has_country_flag = flandre_is_recruit_flag
+					#has_country_flag = cirno_is_recruit_flag
+					#has_country_flag = aya_is_recruit_flag
+					has_country_flag = yuka_is_recruit_flag
+					has_country_flag = tenshi_is_recruit_flag
+					has_country_flag = yukari_is_recruit_flag
+					has_country_flag = kokoro_is_recruit_flag
+					has_country_flag = kogasa_is_recruit_flag
+					has_country_flag = shikieiki_is_recruit_flag
+					#has_country_flag = kosuzu_is_recruit_flag
+					#has_country_flag = hearn_is_recruit_flag
+					#has_country_flag = renko_is_recruit_flag
+					has_country_flag = seiran_is_recruit_flag
+					has_country_flag = ringo_is_recruit_flag
+					has_country_flag = doremy_is_recruit_flag
+					has_country_flag = sagume_is_recruit_flag
+					# has_country_flag = clownpiece_is_recruit_flag
+					# has_country_flag = junko_is_recruit_flag
+					# has_country_flag = hecatia_is_recruit_flag
+				}
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			set_country_flag = gsk_begin_add_contact_flag
+			add_dynamic_modifier = {
+				modifier = gsk_dym_add_contact_1
+			}
+		}
+		remove_effect = {
+		}
+	}
 	gsk_add_contact_mission = {
 		priority = 500
 		activation = {
@@ -242,8 +312,21 @@ gsk_active_system = {
 		fire_only_once = no
 		cost = 0
 		complete_effect = {
-			remove_dynamic_modifier = {
-				modifier = gsk_dym_add_contact
+			if = {
+				limit = { 
+					has_dynamic_modifier = { modifier = gsk_dym_add_contact }
+			 	}
+				remove_dynamic_modifier = {
+					modifier = gsk_dym_add_contact
+				}
+			}
+			if = {
+				limit = { 
+					has_dynamic_modifier = { modifier = gsk_dym_add_contact_1 }
+			 	}
+				remove_dynamic_modifier = {
+					modifier = gsk_dym_add_contact_1
+				}
 			}
 			clr_country_flag = gsk_begin_add_contact_flag
 		}
